@@ -36,7 +36,7 @@ const parse = async () => {
             date,
         }
         if (roundData.course?.date !== course.date) {
-            if (roundData.players?.length >= 4 && course.date?.startsWith('2021')) {    // Kierros valmis: sortataan, lasketaan rank ja push
+            if (roundData.players?.length >= 5 && course.date?.startsWith('2021')) {    // Kierros valmis: sortataan, lasketaan rank ja push
                 for (const p of roundData.players) {
                     // Lasketaan kaikille handicapit
                     p['HC'] = playerStats[p.name].runningHC / playerStats[p.name].games || 0
@@ -55,6 +55,7 @@ const parse = async () => {
                     let prevTulos = roundData.players[i - 1]?.totalHC || -1
                     if (p.totalHC !== prevTulos) rank = Number(i) + 1
                     playerStats[p.name].sijoitukset[gameIndex] = rank
+                    p['rank'] = rank
                 }
                 allRounds.push(roundData)
                 gameIndex++;
