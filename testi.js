@@ -5,72 +5,64 @@ const util = require('util')
 const parse = async () => {
     const rawData = await fs.readFile('score.csv', 'utf-8')
     const data = rawData.split('\n').reverse();
-    let allRounds = []
-    let roundData = { course: null, players: [] }
-    const pointsArray = [
-        10, 6, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0
-    ]
-    const playerStats = {
-        Henkka: { sijoitukset: [], runningHC: 0, games: 0 },
-        Saikkis: { sijoitukset: [], runningHC: 0, games: 0 },
-        Jouni: { sijoitukset: [], runningHC: 0, games: 0 },
-        Kimmo: { sijoitukset: [], runningHC: 0, games: 0 },
-        Emma: { sijoitukset: [], runningHC: 0, games: 0 },
-        Teemu: { sijoitukset: [], runningHC: 0, games: 0 },
-        Sampo: { sijoitukset: [], runningHC: 0, games: 0 },
-        Henu: { sijoitukset: [], runningHC: 0, games: 0 },
-        Kari: { sijoitukset: [], runningHC: 0, games: 0 },
 
+    const courses = {
+        Malminiitty: { layout: 'Niitty', games: 0, players: {} },
+        Siltamäki: { layout: 'Updated', games: 0, players: {} },
+        'Lentolan Frisbeegolf': { games: 0, players: {} },
+        'Separi Simppari': { games: 0, players: {} },
+        'Separisimppa': { games: 0, players: {} },
+        'Ford DiscGolfPark': { layout: 'Blue layout', games: 0, players: {} }
     }
+    const players = {
+        Henkka: {},
+        Antti: {},
+        Teemu: {},
+        Kimmo: {},
+        Emma: {},
+        Jouni: {},
+        Sampo: {},
+        Henu: {}
+    }
+    const games = []
 
-    let gameIndex = 0;
+    let currentGame = { course: { name: '', date: '' }, players: [] }
 
-    for (const line in data) {
-        let [name, courseName, layout, date, total, plusminus, ...score] = data[line].split(',');
-
-        if (name === 'Antti') name = 'Saikkis'
-
-        const course = {
-            courseName,
-            layout,
-            date,
+    for (let i = 0; i < data.length; i++) {
+        let [name, courseName, layout, date, total, plusminus, ...score] = data[i].split(',');
+        if (name === 'Saikkis') name = 'Antti'
+        if (!(name in players) || !date.startsWith('2021')) {
+            continue;
         }
-        if (roundData.course?.date !== course.date) {
-            if (roundData.players?.length >= 5 && course.date?.startsWith('2021')) {    // Kierros valmis: sortataan, lasketaan rank ja push
-                for (const p of roundData.players) {
-                    // Lasketaan kaikille handicapit
-                    p['HC'] = playerStats[p.name].runningHC / playerStats[p.name].games || 0
-                    playerStats[p.name].games++;
-                    playerStats[p.name]['handiCap'] = p['HC']
-                    p['totalHC'] = p.total - p['HC']
+        if (!(courseName in courses) && (courses[courseName]?.layout === undefined || courses[courseName].layout === layout)) {
+            continue;
+        }
+        if (date !== currentGame.course.date) {
+            if (currentGame.players.length >= 4) {
+                games.push(currentGame)
+                for (let playerObj of currentGame.players) {
+                    console.log(playerObj.name + " @ " + currentGame.course.name + " = " + playerObj.plusminus)
+                    if (!(playerObj.name in courses[currentGame.course.name].players)) {
+                        courses[currentGame.course.name].players[playerObj.name] = { runningHC: 0, HC: 0, games: 0 }
+                    }
+                    const coursesPlayerObj = courses[currentGame.course.name].players[playerObj.name]
 
-                    playerStats[p.name].runningHC += Number(p.plusminus)
+                    playerObj['HC'] = coursesPlayerObj.HC || 0
+                    playerObj['totalHC'] = Number(playerObj['total']) - playerObj.HC
+                    
+                    coursesPlayerObj.runningHC += Number(playerObj.plusminus)
+                    coursesPlayerObj.games++
+                    coursesPlayerObj.HC = coursesPlayerObj.runningHC / coursesPlayerObj.games
                 }
-                roundData.players.sort((a,b) => a.totalHC - b.totalHC)
-                let rank = 1;
-
-                for(const i in roundData.players) {
-                    // Lasketaan rnkingit
-                    const p = roundData.players[i]
-                    let prevTulos = roundData.players[i - 1]?.totalHC || -1
-                    if (p.totalHC !== prevTulos) rank = Number(i) + 1
-                    playerStats[p.name].sijoitukset[gameIndex] = rank
-                    p['rank'] = rank
-                }
-                allRounds.push(roundData)
-                gameIndex++;
             }
+            currentGame = { course: { name: courseName, date, layout }, players: [] }
+        }
+        currentGame.players.push({ name, score, total, plusminus })
 
-            roundData = { course, players: [] }
-        }
-        if (name in playerStats) {
-            roundData.players.push({ name, total, plusminus, score })
-        } else if (name === 'Par') {
-            course.par = total
-            course.parHoles = score
-        }
     }
-    return allRounds;
+    //console.log( util.inspect(courses, true, null, true) )
+    console.log( util.inspect(games, true, null, true))
+    return games
 }
 
 module.exports = parse;
