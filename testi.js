@@ -58,8 +58,8 @@ const parse = async () => {
         currentGame.players.push({ name, score, total, plusminus })
 
     }
-    console.log( util.inspect(courses, true, null, true) )
-    //console.log( util.inspect(games, true, null, true))
+    //console.log( util.inspect(courses, true, null, true) )
+    console.log( util.inspect(games, true, null, true))
     return { games, courses }
 }
 
