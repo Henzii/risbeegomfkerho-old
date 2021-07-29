@@ -65,7 +65,7 @@ const parse = async () => {
             }
             currentGame = { course: { name: courseName, date, layout }, players: [] }
         }
-        currentGame.players.push({ name, score, total, plusminus })
+        currentGame.players.push({ name, score, total: Number(total), plusminus: Number(plusminus) })
 
     }
     //console.log( util.inspect(courses, true, null, true) )
