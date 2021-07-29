@@ -37,7 +37,8 @@ const parse = async () => {
                 }
 
                 games.push(currentGame)
-                for (let playerObj of currentGame.players) {
+
+                for (let playerObj of currentGame.players) {        // Laske Handicapit
                    
                     let coursesPlayerObj = courseStats.players.find(p => p.name === playerObj.name)
                     if (!coursesPlayerObj) {
@@ -51,6 +52,15 @@ const parse = async () => {
                     coursesPlayerObj.runningHC += Number(playerObj.plusminus)
                     coursesPlayerObj.games++
                     coursesPlayerObj.HC = coursesPlayerObj.runningHC / coursesPlayerObj.games
+                }
+                for (let playerObj of currentGame.players) {        // Laske rankingit
+                    const rank = currentGame.players.reduce((p, c) => {
+                        if (playerObj.total > c.total) p.total++
+                        if (playerObj.totalHC > c.totalHC) p.hc++
+                        return p;
+                    }, { total: 1, hc: 1 })
+                    playerObj['rank'] = rank.total
+                    playerObj['rankHC'] = rank.hc
                 }
             }
             currentGame = { course: { name: courseName, date, layout }, players: [] }
