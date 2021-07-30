@@ -29,7 +29,7 @@ const parse = async () => {
             continue;
         }
         if (date !== currentGame.course.date) {
-            if (currentGame.players.length >= 2) {
+            if (currentGame.players.length >= 4) {
 
                 let courseStats = courses.find(c => (c.name === currentGame.course.name && c.layout === currentGame.course.layout))
                 if (!courseStats) {
