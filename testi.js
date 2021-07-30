@@ -13,6 +13,8 @@ const parse = async () => {
         Teemu: {},
         Kimmo: {},
         Emma: {},
+        Saku: {},
+        Kari: {},
         Jouni: {},
         Sampo: {},
         Henu: {}
