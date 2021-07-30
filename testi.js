@@ -14,7 +14,6 @@ const parse = async () => {
         Kimmo: {},
         Emma: {},
         Saku: {},
-        Kari: {},
         Jouni: {},
         Sampo: {},
         Henu: {}
@@ -30,18 +29,16 @@ const parse = async () => {
             continue;
         }
         if (date !== currentGame.course.date) {
-            if (currentGame.players.length >= 5) {
+            if (currentGame.players.length >= 2) {
 
-                let courseStats = courses.find( c => ( c.name === currentGame.course.name && c.layout === currentGame.course.layout) )
+                let courseStats = courses.find(c => (c.name === currentGame.course.name && c.layout === currentGame.course.layout))
                 if (!courseStats) {
                     courseStats = { name: currentGame.course.name, layout: currentGame.course.layout, games: 0, players: [] }
-                    courses.push( courseStats )
+                    courses.push(courseStats)
                 }
 
-                games.push(currentGame)
-
                 for (let playerObj of currentGame.players) {        // Laske Handicapit
-                   
+
                     let coursesPlayerObj = courseStats.players.find(p => p.name === playerObj.name)
                     if (!coursesPlayerObj) {
                         coursesPlayerObj = { name: playerObj.name, runningHC: 0, HC: 0, games: 0 }
@@ -50,20 +47,24 @@ const parse = async () => {
 
                     playerObj['HC'] = coursesPlayerObj.HC || 0
                     playerObj['totalHC'] = Number(playerObj['total']) - playerObj.HC
-                    
+
                     coursesPlayerObj.runningHC += Number(playerObj.plusminus)
                     coursesPlayerObj.games++
                     coursesPlayerObj.HC = coursesPlayerObj.runningHC / coursesPlayerObj.games
                 }
-                for (let playerObj of currentGame.players) {        // Laske rankingit
-                    const rank = currentGame.players.reduce((p, c) => {
-                        if (playerObj.total > c.total) p.total++
-                        if (playerObj.totalHC > c.totalHC) p.hc++
-                        return p;
-                    }, { total: 1, hc: 1 })
-                    playerObj['rank'] = rank.total
-                    playerObj['rankHC'] = rank.hc
+                if (currentGame.players.length >= 4) {
+                    games.push(currentGame)
+                    for (let playerObj of currentGame.players) {        // Laske rankingit
+                        const rank = currentGame.players.reduce((p, c) => {
+                            if (playerObj.total > c.total) p.total++
+                            if (playerObj.totalHC > c.totalHC) p.hc++
+                            return p;
+                        }, { total: 1, hc: 1 })
+                        playerObj['rank'] = rank.total
+                        playerObj['rankHC'] = rank.hc
+                    }
                 }
+         
             }
             currentGame = { course: { name: courseName, date, layout }, players: [] }
         }
@@ -71,7 +72,7 @@ const parse = async () => {
 
     }
     //console.log( util.inspect(courses, true, null, true) )
-    console.log( util.inspect(games, true, null, true))
+    console.log(util.inspect(games, true, null, true))
     return { games, courses }
 }
 
