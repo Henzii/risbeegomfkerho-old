@@ -8,7 +8,7 @@ const PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo"
 const ALLOW_YEAR = '2021'
 const HYLATYT_PELAAJAT = new Map()
 
-let data
+let data = null
 try {
     data = require('./games.json')
     console.log('games.json,', data.games.length, 'peliä.')
@@ -33,7 +33,8 @@ const parse = async (fileName) => {
     }
     let game = { players: [], course: {} }
     for (const line of rawData.split('\n')) {
-        const [player, course, layout, date, total, plusminus, ...score] = line.split(',')
+        let [player, course, layout, date, total, plusminus, ...score] = line.split(',')
+        if (player === "Saikkis") player = "Antti"
 
         if (!date || !date.startsWith(ALLOW_YEAR) || dataMap.get(date + course) === true) {
             continue;

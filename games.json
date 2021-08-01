@@ -1,1 +1,2709 @@
-{"games":[{"course":{"name":"Malminiitty","layout":"Niitty","date":"2021-01-05 20:16","par":"27"},"players":[{"name":"Kimmo","total":27,"plusminus":0,"score":["2","3","3","3","3","3","3","3","4","","","","","","","","","","",""],"HC":0,"totalHC":27,"rank":2,"rankHC":2},{"name":"Emma","total":32,"plusminus":5,"score":["4","3","4","3","3","3","4","4","4","","","","","","","","","","",""],"HC":0,"totalHC":32,"rank":4,"rankHC":4},{"name":"Saikkis","total":31,"plusminus":4,"score":["3","3","3","4","4","4","3","4","3","","","","","","","","","","",""],"HC":0,"totalHC":31,"rank":3,"rankHC":3},{"name":"Henkka","total":25,"plusminus":-2,"score":["2","2","3","2","2","3","3","4","4","","","","","","","","","","",""],"HC":0,"totalHC":25,"rank":1,"rankHC":1},{"name":"Teemu","total":33,"plusminus":6,"score":["4","3","4","3","3","4","3","4","5","","","","","","","","","","",""],"HC":0,"totalHC":33,"rank":5,"rankHC":5}],"match":true},{"course":{"name":"Malminiitty","layout":"Niitty","date":"2021-05-07 22:59","par":"27"},"players":[{"name":"Kimmo","total":31,"plusminus":4,"score":["3","2","4","2","4","4","5","4","3","","","","","","","","","","","","","","",""],"HC":0,"totalHC":31,"rank":3,"rankHC":5},{"name":"Emma","total":31,"plusminus":4,"score":["3","3","3","3","3","4","4","4","4","","","","","","","","","","","","","","",""],"HC":5,"totalHC":26,"rank":3,"rankHC":2},{"name":"Saikkis","total":29,"plusminus":2,"score":["3","3","3","3","3","3","3","4","4","","","","","","","","","","","","","","",""],"HC":3.25,"totalHC":25.75,"rank":2,"rankHC":1},{"name":"Henkka","total":28,"plusminus":1,"score":["2","3","4","3","3","3","3","4","3","","","","","","","","","","","","","","",""],"HC":-1.2142857142857142,"totalHC":29.214285714285715,"rank":1,"rankHC":4},{"name":"Teemu","total":32,"plusminus":5,"score":["2","5","3","3","4","4","5","3","3","","","","","","","","","","","","","","",""],"HC":6,"totalHC":26,"rank":5,"rankHC":2}],"match":true},{"course":{"name":"Talin Frisbeegolfpuisto","layout":"Pro Tour Tali 2020","date":"2021-05-18 17:10","par":"61"},"players":[{"name":"Kimmo","total":83,"plusminus":22,"score":["6","5","3","5","4","6","3","5","4","5","4","4","4","6","4","5","6","4","","","","","",""],"HC":0,"totalHC":83,"rank":2,"rankHC":2},{"name":"Emma","total":90,"plusminus":29,"score":["9","5","3","4","4","7","4","4","6","6","6","4","6","4","5","3","5","5","","","","","",""],"HC":0,"totalHC":90,"rank":5,"rankHC":5},{"name":"Saikkis","total":84,"plusminus":23,"score":["7","4","2","4","5","5","4","3","3","5","4","7","4","5","4","3","11","4","","","","","",""],"HC":0,"totalHC":84,"rank":3,"rankHC":3},{"name":"Jouni","total":84,"plusminus":23,"score":["6","5","3","3","4","9","5","4","3","5","5","4","5","4","3","3","9","4","","","","","",""],"HC":0,"totalHC":84,"rank":3,"rankHC":3},{"name":"Henkka","total":77,"plusminus":16,"score":["7","6","3","4","4","4","6","5","4","5","3","3","4","4","3","3","6","3","","","","","",""],"HC":0,"totalHC":77,"rank":1,"rankHC":1}],"match":true},{"course":{"name":"Keinukallio Discgolf","layout":"Main","date":"2021-05-24 16:32","par":"63"},"players":[{"name":"Kimmo","total":95,"plusminus":32,"score":["11","4","3","5","6","4","6","4","4","3","5","7","7","5","3","7","4","7","","","","","",""],"HC":0,"totalHC":95,"rank":4,"rankHC":4},{"name":"Emma","total":116,"plusminus":53,"score":["12","5","6","4","7","7","6","5","4","4","7","10","10","7","4","7","5","6","","","","","",""],"HC":0,"totalHC":116,"rank":5,"rankHC":5},{"name":"Saikkis","total":85,"plusminus":22,"score":["9","3","6","4","6","4","4","4","4","2","6","6","5","5","3","5","5","4","","","","","",""],"HC":0,"totalHC":85,"rank":2,"rankHC":2},{"name":"Jouni","total":89,"plusminus":26,"score":["10","5","5","3","7","3","7","4","3","4","5","6","6","4","3","6","3","5","","","","","",""],"HC":0,"totalHC":89,"rank":3,"rankHC":3},{"name":"Henkka","total":82,"plusminus":19,"score":["6","3","4","3","6","4","4","3","3","3","7","7","6","4","3","6","5","5","","","","","",""],"HC":0,"totalHC":82,"rank":1,"rankHC":1}],"match":true},{"course":{"name":"Lentolan Frisbeegolf","layout":"Main","date":"2021-06-03 15:58","par":"27"},"players":[{"name":"Kimmo","total":30,"plusminus":3,"score":["3","3","3","4","4","4","3","3","3","","","","","","","","","","","","","","",""],"HC":0,"totalHC":30,"rank":4,"rankHC":4},{"name":"Emma","total":32,"plusminus":5,"score":["3","4","4","3","4","3","3","4","4","","","","","","","","","","","","","","",""],"HC":0,"totalHC":32,"rank":5,"rankHC":5},{"name":"Saikkis","total":28,"plusminus":1,"score":["3","2","3","4","4","3","3","3","3","","","","","","","","","","","","","","",""],"HC":0,"totalHC":28,"rank":3,"rankHC":3},{"name":"Jouni","total":26,"plusminus":-1,"score":["3","3","2","3","3","2","4","3","3","","","","","","","","","","","","","","",""],"HC":0,"totalHC":26,"rank":2,"rankHC":2},{"name":"Henkka","total":25,"plusminus":-2,"score":["2","3","3","3","3","3","3","3","2","","","","","","","","","","","","","","",""],"HC":0,"totalHC":25,"rank":1,"rankHC":1}],"match":true},{"course":{"name":"Siltamäki","layout":"Updated","date":"2021-07-01 16:18","par":"53"},"players":[{"name":"Jouni","total":53,"plusminus":0,"score":["4","3","2","2","3","3","3","4","3","3","2","4","3","2","2","3","4","3","",""],"HC":0,"totalHC":53,"rank":1,"rankHC":2},{"name":"Kimmo","total":60,"plusminus":7,"score":["3","5","2","3","3","3","3","3","4","4","4","4","4","3","2","4","3","3","",""],"HC":0,"totalHC":60,"rank":3,"rankHC":4},{"name":"Teemu","total":64,"plusminus":11,"score":["3","4","3","3","5","3","3","4","4","4","4","4","3","3","3","4","3","4","",""],"HC":12,"totalHC":52,"rank":5,"rankHC":1},{"name":"Saikkis","total":57,"plusminus":4,"score":["5","3","3","3","2","3","3","4","4","3","3","3","3","3","2","4","3","3","",""],"HC":0,"totalHC":57,"rank":2,"rankHC":3},{"name":"Sampo","total":61,"plusminus":8,"score":["4","3","3","2","3","3","2","3","6","3","4","3","4","3","4","4","3","4","",""],"HC":0,"totalHC":61,"rank":4,"rankHC":5}],"match":true},{"course":{"name":"Separisimppa","layout":"Custom","date":"2021-07-02 21:12","par":"54"},"players":[{"name":"Sampo","total":57,"plusminus":3,"score":["4","4","3","3","3","3","3","4","3","5","2","3","2","3","3","2","3","4","","","","","",""],"HC":0,"totalHC":57,"rank":2,"rankHC":2},{"name":"Teemu","total":58,"plusminus":4,"score":["4","3","3","4","3","2","3","5","3","3","3","3","3","4","4","2","3","3","","","","","",""],"HC":0,"totalHC":58,"rank":4,"rankHC":4},{"name":"Henkka","total":52,"plusminus":-2,"score":["3","3","3","3","3","3","2","4","2","2","3","2","3","4","3","3","4","2","","","","","",""],"HC":0,"totalHC":52,"rank":1,"rankHC":1},{"name":"Emma","total":58,"plusminus":4,"score":["4","3","4","3","4","3","3","2","3","3","3","3","4","4","4","2","3","3","","","","","",""],"HC":0,"totalHC":58,"rank":4,"rankHC":4},{"name":"Antti","total":57,"plusminus":3,"score":["3","3","3","3","3","3","3","2","3","3","3","4","4","3","4","3","3","4","","","","","",""],"HC":0,"totalHC":57,"rank":2,"rankHC":2},{"name":"Kimmo","total":58,"plusminus":4,"score":["4","4","3","2","4","4","3","3","2","2","2","2","3","4","4","3","4","5","","","","","",""],"HC":0,"totalHC":58,"rank":4,"rankHC":4}],"match":true},{"course":{"name":"Supersimppari","layout":"Custom","date":"2021-07-31 17:48","par":"62"},"players":[{"name":"Teemu","total":78,"plusminus":16,"score":["2","4","4","5","5","3","5","3","4","4","6","4","4","3","3","3","4","5","3","4","","","",""],"HC":0,"totalHC":78,"rank":6,"rankHC":6},{"name":"Henkka","total":62,"plusminus":0,"score":["2","3","4","4","3","3","3","2","3","3","4","3","3","2","5","2","3","4","3","3","","","",""],"HC":0,"totalHC":62,"rank":2,"rankHC":2},{"name":"Kimmo","total":71,"plusminus":9,"score":["2","4","3","4","3","3","3","3","4","4","4","3","4","4","4","3","4","5","4","3","","","",""],"HC":0,"totalHC":71,"rank":5,"rankHC":5},{"name":"Emma","total":80,"plusminus":18,"score":["3","4","3","5","4","3","4","5","5","4","5","4","4","3","4","3","4","5","4","4","","","",""],"HC":0,"totalHC":80,"rank":7,"rankHC":7},{"name":"Jouni","total":60,"plusminus":-2,"score":["2","3","2","4","2","2","3","2","4","4","4","3","3","2","3","3","4","3","3","4","","","",""],"HC":0,"totalHC":60,"rank":1,"rankHC":1},{"name":"Sampo","total":70,"plusminus":8,"score":["3","3","4","4","3","3","3","3","3","4","6","3","6","3","3","2","4","3","3","4","","","",""],"HC":0,"totalHC":70,"rank":3,"rankHC":3},{"name":"Antti","total":70,"plusminus":8,"score":["3","4","4","6","3","2","4","3","4","4","4","3","3","3","4","3","3","4","3","3","","","",""],"HC":0,"totalHC":70,"rank":3,"rankHC":3}],"match":true}],"hc":[{"course":{"name":"Malminiitty","layout":"Niitty"},"players":[{"name":"Kimmo","games":6,"hc":0.3333333333333333,"runningHc":2},{"name":"Emma","games":6,"hc":4.166666666666667,"runningHc":25},{"name":"Saikkis","games":8,"hc":0.875,"runningHc":7},{"name":"Henkka","games":29,"hc":-1.6551724137931034,"runningHc":-48},{"name":"Teemu","games":8,"hc":3.375,"runningHc":27},{"name":"Antti","games":14,"hc":-0.42857142857142855,"runningHc":-6},{"name":"Jouni","games":6,"hc":-2.5,"runningHc":-15},{"name":"Sampo","games":6,"hc":2.6666666666666665,"runningHc":16}]},{"course":{"name":"Ford Amateur DiscGolfPark (A1)","layout":"Main"},"players":[{"name":"Henkka","games":7,"hc":3.5714285714285716,"runningHc":25},{"name":"Antti","games":6,"hc":5.166666666666667,"runningHc":31},{"name":"Teemu","games":1,"hc":17,"runningHc":17},{"name":"Jouni","games":1,"hc":-1,"runningHc":-1},{"name":"Saikkis","games":1,"hc":3,"runningHc":3}]},{"course":{"name":"Siltamäki","layout":"Updated"},"players":[{"name":"Henkka","games":8,"hc":4.5,"runningHc":36},{"name":"Antti","games":5,"hc":9.2,"runningHc":46},{"name":"Jouni","games":4,"hc":0.5,"runningHc":2},{"name":"Teemu","games":6,"hc":11.166666666666666,"runningHc":67},{"name":"Kimmo","games":1,"hc":7,"runningHc":7},{"name":"Saikkis","games":1,"hc":4,"runningHc":4},{"name":"Sampo","games":2,"hc":9,"runningHc":18}]},{"course":{"name":"Ford DiscGolfPark","layout":"Talvi layout"},"players":[{"name":"Henkka","games":5,"hc":14.6,"runningHc":73},{"name":"Antti","games":2,"hc":14,"runningHc":28},{"name":"Kimmo","games":2,"hc":21,"runningHc":42},{"name":"Emma","games":2,"hc":29.5,"runningHc":59},{"name":"Saikkis","games":3,"hc":21,"runningHc":63},{"name":"Jouni","games":1,"hc":23,"runningHc":23}]},{"course":{"name":"Simonkenttä","layout":"Classic"},"players":[{"name":"Kimmo","games":1,"hc":6,"runningHc":6},{"name":"Emma","games":1,"hc":9,"runningHc":9},{"name":"Saikkis","games":1,"hc":1,"runningHc":1},{"name":"Henkka","games":3,"hc":0.3333333333333333,"runningHc":1},{"name":"Teemu","games":2,"hc":6.5,"runningHc":13},{"name":"Antti","games":2,"hc":2.5,"runningHc":5}]},{"course":{"name":"Kirkkonummen MultiGolfPark","layout":"Main"},"players":[{"name":"Henkka","games":1,"hc":-4,"runningHc":-4},{"name":"Antti","games":1,"hc":0,"runningHc":0}]},{"course":{"name":"Grani DiscGolfPark","layout":"Main"},"players":[{"name":"Kimmo","games":1,"hc":0,"runningHc":0},{"name":"Emma","games":1,"hc":7,"runningHc":7},{"name":"Henkka","games":2,"hc":0,"runningHc":0},{"name":"Saikkis","games":1,"hc":2,"runningHc":2},{"name":"Antti","games":1,"hc":0,"runningHc":0}]},{"course":{"name":"Laaksolahden FrisbeeGolfrata","layout":"Main"},"players":[{"name":"Henkka","games":1,"hc":-3,"runningHc":-3},{"name":"Antti","games":1,"hc":-2,"runningHc":-2}]},{"course":{"name":"Päiväkumpu","layout":"10 Holes"},"players":[{"name":"Henkka","games":3,"hc":-1.3333333333333333,"runningHc":-4},{"name":"Antti","games":3,"hc":3,"runningHc":9}]},{"course":{"name":"Herusten Frisbeegolfrata ","layout":"Main"},"players":[{"name":"Henkka","games":3,"hc":4.666666666666667,"runningHc":14},{"name":"Antti","games":2,"hc":3.5,"runningHc":7},{"name":"Teemu","games":1,"hc":13,"runningHc":13},{"name":"Jouni","games":1,"hc":-1,"runningHc":-1},{"name":"Saikkis","games":1,"hc":9,"runningHc":9}]},{"course":{"name":"Sahanmäki DiscGolfPark","layout":"Sahanmäki 20 väylää (2020)"},"players":[{"name":"Teemu","games":1,"hc":41,"runningHc":41},{"name":"Henkka","games":1,"hc":9,"runningHc":9},{"name":"Antti","games":1,"hc":17,"runningHc":17}]},{"course":{"name":"Nikkilä DiscGolfPark","layout":"Main"},"players":[{"name":"Henkka","games":2,"hc":4.5,"runningHc":9},{"name":"Antti","games":2,"hc":5.5,"runningHc":11}]},{"course":{"name":"Kartanonkoski MultiGolfPark","layout":"Main"},"players":[{"name":"Kimmo","games":1,"hc":0,"runningHc":0},{"name":"Emma","games":1,"hc":-1,"runningHc":-1},{"name":"Saikkis","games":1,"hc":-3,"runningHc":-3},{"name":"Henkka","games":1,"hc":-3,"runningHc":-3}]},{"course":{"name":"Söderkullan frisbeegolfrata","layout":"Main 2018"},"players":[{"name":"Henkka","games":3,"hc":3,"runningHc":9},{"name":"Antti","games":3,"hc":3.6666666666666665,"runningHc":11},{"name":"Teemu","games":1,"hc":6,"runningHc":6}]},{"course":{"name":"Söderkullan Kartano ","layout":"Main"},"players":[{"name":"Henkka","games":3,"hc":-4,"runningHc":-12},{"name":"Antti","games":3,"hc":-2,"runningHc":-6}]},{"course":{"name":"Oittaan Ulkoilualue","layout":"Oittaa Frisbeegolf Espoo - Kalliometsä (18 väylää)"},"players":[{"name":"Henkka","games":4,"hc":0.75,"runningHc":3},{"name":"Antti","games":1,"hc":12,"runningHc":12},{"name":"Jouni","games":3,"hc":-3.6666666666666665,"runningHc":-11},{"name":"Saikkis","games":3,"hc":-1.6666666666666667,"runningHc":-5}]},{"course":{"name":"Lemmenlaakson Frisbeegolfrata","layout":"2020 Layout"},"players":[{"name":"Henkka","games":2,"hc":10,"runningHc":20},{"name":"Antti","games":2,"hc":16,"runningHc":32}]},{"course":{"name":"Meilahden kiekkogolfrata","layout":"Main"},"players":[{"name":"Kimmo","games":1,"hc":6,"runningHc":6},{"name":"Saikkis","games":1,"hc":12,"runningHc":12},{"name":"Henkka","games":1,"hc":0,"runningHc":0},{"name":"Teemu","games":1,"hc":14,"runningHc":14}]},{"course":{"name":"Munkkiniemi","layout":"Munkkiniemi 19"},"players":[{"name":"Henkka","games":1,"hc":5,"runningHc":5},{"name":"Antti","games":1,"hc":6,"runningHc":6},{"name":"Teemu","games":1,"hc":6,"runningHc":6}]},{"course":{"name":"Kivikko Frisbeegolf Park","layout":"Main"},"players":[{"name":"Teemu","games":1,"hc":15,"runningHc":15},{"name":"Henkka","games":1,"hc":4,"runningHc":4},{"name":"Antti","games":1,"hc":6,"runningHc":6}]},{"course":{"name":"Varistonniitty","layout":"Main"},"players":[{"name":"Teemu","games":1,"hc":32,"runningHc":32},{"name":"Jouni","games":1,"hc":7,"runningHc":7},{"name":"Henkka","games":1,"hc":11,"runningHc":11},{"name":"Antti","games":1,"hc":21,"runningHc":21}]},{"course":{"name":"Talin Frisbeegolfpuisto","layout":"Pro Tour Tali 2020"},"players":[{"name":"Kimmo","games":1,"hc":22,"runningHc":22},{"name":"Emma","games":1,"hc":29,"runningHc":29},{"name":"Saikkis","games":1,"hc":23,"runningHc":23},{"name":"Jouni","games":1,"hc":23,"runningHc":23},{"name":"Henkka","games":1,"hc":16,"runningHc":16}]},{"course":{"name":"Nurmijärven Frisbeegolfrata","layout":"Main"},"players":[{"name":"Henkka","games":3,"hc":11.333333333333334,"runningHc":34},{"name":"Antti","games":2,"hc":16.5,"runningHc":33},{"name":"Jouni","games":1,"hc":7,"runningHc":7},{"name":"Saikkis","games":1,"hc":17,"runningHc":17}]},{"course":{"name":"Keinukallio Discgolf","layout":"Main"},"players":[{"name":"Kimmo","games":1,"hc":32,"runningHc":32},{"name":"Emma","games":1,"hc":53,"runningHc":53},{"name":"Saikkis","games":1,"hc":22,"runningHc":22},{"name":"Jouni","games":1,"hc":26,"runningHc":26},{"name":"Henkka","games":2,"hc":21,"runningHc":42},{"name":"Teemu","games":1,"hc":33,"runningHc":33},{"name":"Sampo","games":1,"hc":38,"runningHc":38}]},{"course":{"name":"Puolarmaari","layout":"Standard"},"players":[{"name":"Kimmo","games":1,"hc":14,"runningHc":14},{"name":"Emma","games":1,"hc":13,"runningHc":13},{"name":"Saikkis","games":1,"hc":0,"runningHc":0},{"name":"Henkka","games":1,"hc":9,"runningHc":9}]},{"course":{"name":"Röyläntuvan Frisbeegolfkenttä","layout":"Main"},"players":[{"name":"Antti","games":1,"hc":6,"runningHc":6},{"name":"Henkka","games":1,"hc":2,"runningHc":2}]},{"course":{"name":"Riutta DiscGolfPark","layout":"19 väylää (2020)"},"players":[{"name":"Kimmo","games":1,"hc":21,"runningHc":21},{"name":"Saikkis","games":1,"hc":15,"runningHc":15},{"name":"Henkka","games":1,"hc":11,"runningHc":11}]},{"course":{"name":"Paloaseman Puisto DiscGolfPark","layout":"2018"},"players":[{"name":"Kimmo","games":1,"hc":2,"runningHc":2},{"name":"Saikkis","games":1,"hc":1,"runningHc":1},{"name":"Henkka","games":1,"hc":1,"runningHc":1}]},{"course":{"name":"Pohjolan Rinteen Puisto","layout":"Main"},"players":[{"name":"Kimmo","games":1,"hc":0,"runningHc":0},{"name":"Saikkis","games":1,"hc":-1,"runningHc":-1},{"name":"Henkka","games":1,"hc":0,"runningHc":0}]},{"course":{"name":"Jokipuiston Koulun DiscGolfPark","layout":"Main"},"players":[{"name":"Henkka","games":3,"hc":-3,"runningHc":-9},{"name":"Antti","games":1,"hc":-1,"runningHc":-1},{"name":"Jouni","games":2,"hc":-3,"runningHc":-6},{"name":"Teemu","games":2,"hc":0,"runningHc":0},{"name":"Saikkis","games":2,"hc":-1,"runningHc":-2}]},{"course":{"name":"Lentolan Frisbeegolf","layout":"Main"},"players":[{"name":"Kimmo","games":2,"hc":0.5,"runningHc":1},{"name":"Emma","games":1,"hc":5,"runningHc":5},{"name":"Saikkis","games":3,"hc":-0.3333333333333333,"runningHc":-1},{"name":"Jouni","games":3,"hc":-1,"runningHc":-3},{"name":"Henkka","games":7,"hc":-2.7142857142857144,"runningHc":-19},{"name":"Teemu","games":2,"hc":1.5,"runningHc":3},{"name":"Antti","games":2,"hc":-0.5,"runningHc":-1}]},{"course":{"name":"Sibbe Disc Golf","layout":"Ford Hybrid layout 2021 (blue)"},"players":[{"name":"Teemu","games":1,"hc":38,"runningHc":38},{"name":"Henkka","games":1,"hc":12,"runningHc":12},{"name":"Antti","games":1,"hc":15,"runningHc":15}]},{"course":{"name":"Talma DGP","layout":"Main"},"players":[{"name":"Jouni","games":1,"hc":2,"runningHc":2},{"name":"Henkka","games":1,"hc":10,"runningHc":10},{"name":"Teemu","games":1,"hc":13,"runningHc":13},{"name":"Saikkis","games":1,"hc":9,"runningHc":9}]},{"course":{"name":"Separisimppa","layout":"Custom"},"players":[{"name":"Sampo","games":1,"hc":3,"runningHc":3},{"name":"Teemu","games":1,"hc":4,"runningHc":4},{"name":"Henkka","games":1,"hc":-2,"runningHc":-2},{"name":"Emma","games":1,"hc":4,"runningHc":4},{"name":"Antti","games":1,"hc":3,"runningHc":3},{"name":"Kimmo","games":1,"hc":4,"runningHc":4}]},{"course":{"name":"Äijänpelto Frisbeegolf","layout":"Main"},"players":[{"name":"Henkka","games":2,"hc":19.5,"runningHc":39},{"name":"Antti","games":2,"hc":19,"runningHc":38}]},{"course":{"name":"Pornainen DiscGolfPark","layout":"B-Kierros"},"players":[{"name":"Henkka","games":2,"hc":1.5,"runningHc":3},{"name":"Antti","games":2,"hc":3,"runningHc":6}]},{"course":{"name":"Rajamäen Frisbeegolfrata","layout":"Päivitetty 8.7.2018"},"players":[{"name":"Jouni","games":1,"hc":2,"runningHc":2},{"name":"Henkka","games":1,"hc":5,"runningHc":5},{"name":"Saikkis","games":1,"hc":5,"runningHc":5}]},{"course":{"name":"Supersimppari","layout":"Custom"},"players":[{"name":"Teemu","games":1,"hc":16,"runningHc":16},{"name":"Henkka","games":1,"hc":0,"runningHc":0},{"name":"Kimmo","games":1,"hc":9,"runningHc":9},{"name":"Emma","games":1,"hc":18,"runningHc":18},{"name":"Jouni","games":1,"hc":-2,"runningHc":-2},{"name":"Sampo","games":1,"hc":8,"runningHc":8},{"name":"Antti","games":1,"hc":8,"runningHc":8}]}]}
+{
+    "games": [
+        {
+            "course": {
+                "name": "Malminiitty",
+                "layout": "Niitty",
+                "date": "2021-01-05 20:16",
+                "par": "27"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "total": 27,
+                    "plusminus": 0,
+                    "score": [
+                        "2",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 27,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Emma",
+                    "total": 32,
+                    "plusminus": 5,
+                    "score": [
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 32,
+                    "rank": 4,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Antti",
+                    "total": 31,
+                    "plusminus": 4,
+                    "score": [
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 31,
+                    "rank": 3,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Henkka",
+                    "total": 25,
+                    "plusminus": -2,
+                    "score": [
+                        "2",
+                        "2",
+                        "3",
+                        "2",
+                        "2",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 25,
+                    "rank": 1,
+                    "rankHC": 1
+                },
+                {
+                    "name": "Teemu",
+                    "total": 33,
+                    "plusminus": 6,
+                    "score": [
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "4",
+                        "5",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 33,
+                    "rank": 5,
+                    "rankHC": 5
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Malminiitty",
+                "layout": "Niitty",
+                "date": "2021-05-07 22:59",
+                "par": "27"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "total": 31,
+                    "plusminus": 4,
+                    "score": [
+                        "3",
+                        "2",
+                        "4",
+                        "2",
+                        "4",
+                        "4",
+                        "5",
+                        "4",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 31,
+                    "rank": 3,
+                    "rankHC": 5
+                },
+                {
+                    "name": "Emma",
+                    "total": 31,
+                    "plusminus": 4,
+                    "score": [
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 5,
+                    "totalHC": 26,
+                    "rank": 3,
+                    "rankHC": 1
+                },
+                {
+                    "name": "Antti",
+                    "total": 29,
+                    "plusminus": 2,
+                    "score": [
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0.6428571428571429,
+                    "totalHC": 28.357142857142858,
+                    "rank": 2,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Henkka",
+                    "total": 28,
+                    "plusminus": 1,
+                    "score": [
+                        "2",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": -1.2142857142857142,
+                    "totalHC": 29.214285714285715,
+                    "rank": 1,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Teemu",
+                    "total": 32,
+                    "plusminus": 5,
+                    "score": [
+                        "2",
+                        "5",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "5",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 6,
+                    "totalHC": 26,
+                    "rank": 5,
+                    "rankHC": 1
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Talin Frisbeegolfpuisto",
+                "layout": "Pro Tour Tali 2020",
+                "date": "2021-05-18 17:10",
+                "par": "61"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "total": 83,
+                    "plusminus": 22,
+                    "score": [
+                        "6",
+                        "5",
+                        "3",
+                        "5",
+                        "4",
+                        "6",
+                        "3",
+                        "5",
+                        "4",
+                        "5",
+                        "4",
+                        "4",
+                        "4",
+                        "6",
+                        "4",
+                        "5",
+                        "6",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 83,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Emma",
+                    "total": 90,
+                    "plusminus": 29,
+                    "score": [
+                        "9",
+                        "5",
+                        "3",
+                        "4",
+                        "4",
+                        "7",
+                        "4",
+                        "4",
+                        "6",
+                        "6",
+                        "6",
+                        "4",
+                        "6",
+                        "4",
+                        "5",
+                        "3",
+                        "5",
+                        "5",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 90,
+                    "rank": 5,
+                    "rankHC": 5
+                },
+                {
+                    "name": "Antti",
+                    "total": 84,
+                    "plusminus": 23,
+                    "score": [
+                        "7",
+                        "4",
+                        "2",
+                        "4",
+                        "5",
+                        "5",
+                        "4",
+                        "3",
+                        "3",
+                        "5",
+                        "4",
+                        "7",
+                        "4",
+                        "5",
+                        "4",
+                        "3",
+                        "11",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 84,
+                    "rank": 3,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Jouni",
+                    "total": 84,
+                    "plusminus": 23,
+                    "score": [
+                        "6",
+                        "5",
+                        "3",
+                        "3",
+                        "4",
+                        "9",
+                        "5",
+                        "4",
+                        "3",
+                        "5",
+                        "5",
+                        "4",
+                        "5",
+                        "4",
+                        "3",
+                        "3",
+                        "9",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 84,
+                    "rank": 3,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Henkka",
+                    "total": 77,
+                    "plusminus": 16,
+                    "score": [
+                        "7",
+                        "6",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "6",
+                        "5",
+                        "4",
+                        "5",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "6",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 77,
+                    "rank": 1,
+                    "rankHC": 1
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Keinukallio Discgolf",
+                "layout": "Main",
+                "date": "2021-05-24 16:32",
+                "par": "63"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "total": 95,
+                    "plusminus": 32,
+                    "score": [
+                        "11",
+                        "4",
+                        "3",
+                        "5",
+                        "6",
+                        "4",
+                        "6",
+                        "4",
+                        "4",
+                        "3",
+                        "5",
+                        "7",
+                        "7",
+                        "5",
+                        "3",
+                        "7",
+                        "4",
+                        "7",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 95,
+                    "rank": 4,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Emma",
+                    "total": 116,
+                    "plusminus": 53,
+                    "score": [
+                        "12",
+                        "5",
+                        "6",
+                        "4",
+                        "7",
+                        "7",
+                        "6",
+                        "5",
+                        "4",
+                        "4",
+                        "7",
+                        "10",
+                        "10",
+                        "7",
+                        "4",
+                        "7",
+                        "5",
+                        "6",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 116,
+                    "rank": 5,
+                    "rankHC": 5
+                },
+                {
+                    "name": "Antti",
+                    "total": 85,
+                    "plusminus": 22,
+                    "score": [
+                        "9",
+                        "3",
+                        "6",
+                        "4",
+                        "6",
+                        "4",
+                        "4",
+                        "4",
+                        "4",
+                        "2",
+                        "6",
+                        "6",
+                        "5",
+                        "5",
+                        "3",
+                        "5",
+                        "5",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 85,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Jouni",
+                    "total": 89,
+                    "plusminus": 26,
+                    "score": [
+                        "10",
+                        "5",
+                        "5",
+                        "3",
+                        "7",
+                        "3",
+                        "7",
+                        "4",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "6",
+                        "4",
+                        "3",
+                        "6",
+                        "3",
+                        "5",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 89,
+                    "rank": 3,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Henkka",
+                    "total": 82,
+                    "plusminus": 19,
+                    "score": [
+                        "6",
+                        "3",
+                        "4",
+                        "3",
+                        "6",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "7",
+                        "7",
+                        "6",
+                        "4",
+                        "3",
+                        "6",
+                        "5",
+                        "5",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 82,
+                    "rank": 1,
+                    "rankHC": 1
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Lentolan Frisbeegolf",
+                "layout": "Main",
+                "date": "2021-06-03 15:58",
+                "par": "27"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "total": 30,
+                    "plusminus": 3,
+                    "score": [
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 30,
+                    "rank": 4,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Emma",
+                    "total": 32,
+                    "plusminus": 5,
+                    "score": [
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 32,
+                    "rank": 5,
+                    "rankHC": 5
+                },
+                {
+                    "name": "Antti",
+                    "total": 28,
+                    "plusminus": 1,
+                    "score": [
+                        "3",
+                        "2",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 28,
+                    "rank": 3,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Jouni",
+                    "total": 26,
+                    "plusminus": -1,
+                    "score": [
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "2",
+                        "4",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 26,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Henkka",
+                    "total": 25,
+                    "plusminus": -2,
+                    "score": [
+                        "2",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "2",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 25,
+                    "rank": 1,
+                    "rankHC": 1
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Siltamäki",
+                "layout": "Updated",
+                "date": "2021-07-01 16:18",
+                "par": "53"
+            },
+            "players": [
+                {
+                    "name": "Jouni",
+                    "total": 53,
+                    "plusminus": 0,
+                    "score": [
+                        "4",
+                        "3",
+                        "2",
+                        "2",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "2",
+                        "4",
+                        "3",
+                        "2",
+                        "2",
+                        "3",
+                        "4",
+                        "3",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 53,
+                    "rank": 1,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Kimmo",
+                    "total": 60,
+                    "plusminus": 7,
+                    "score": [
+                        "3",
+                        "5",
+                        "2",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "2",
+                        "4",
+                        "3",
+                        "3",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 60,
+                    "rank": 3,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Teemu",
+                    "total": 64,
+                    "plusminus": 11,
+                    "score": [
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "5",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "4",
+                        "",
+                        ""
+                    ],
+                    "HC": 12,
+                    "totalHC": 52,
+                    "rank": 5,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Antti",
+                    "total": 57,
+                    "plusminus": 4,
+                    "score": [
+                        "5",
+                        "3",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "2",
+                        "4",
+                        "3",
+                        "3",
+                        "",
+                        ""
+                    ],
+                    "HC": 10.666666666666666,
+                    "totalHC": 46.333333333333336,
+                    "rank": 2,
+                    "rankHC": 1
+                },
+                {
+                    "name": "Sampo",
+                    "total": 61,
+                    "plusminus": 8,
+                    "score": [
+                        "4",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "6",
+                        "3",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 61,
+                    "rank": 4,
+                    "rankHC": 5
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Separisimppa",
+                "layout": "Custom",
+                "date": "2021-07-02 21:12",
+                "par": "54"
+            },
+            "players": [
+                {
+                    "name": "Sampo",
+                    "total": 57,
+                    "plusminus": 3,
+                    "score": [
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "5",
+                        "2",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 57,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Teemu",
+                    "total": 58,
+                    "plusminus": 4,
+                    "score": [
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "2",
+                        "3",
+                        "5",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "2",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 58,
+                    "rank": 4,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Henkka",
+                    "total": 52,
+                    "plusminus": -2,
+                    "score": [
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "2",
+                        "4",
+                        "2",
+                        "2",
+                        "3",
+                        "2",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "2",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 52,
+                    "rank": 1,
+                    "rankHC": 1
+                },
+                {
+                    "name": "Emma",
+                    "total": 58,
+                    "plusminus": 4,
+                    "score": [
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "2",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 58,
+                    "rank": 4,
+                    "rankHC": 4
+                },
+                {
+                    "name": "Antti",
+                    "total": 57,
+                    "plusminus": 3,
+                    "score": [
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 57,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Kimmo",
+                    "total": 58,
+                    "plusminus": 4,
+                    "score": [
+                        "4",
+                        "4",
+                        "3",
+                        "2",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "2",
+                        "2",
+                        "2",
+                        "2",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "5",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 58,
+                    "rank": 4,
+                    "rankHC": 4
+                }
+            ],
+            "match": true
+        },
+        {
+            "course": {
+                "name": "Supersimppari",
+                "layout": "Custom",
+                "date": "2021-07-31 17:48",
+                "par": "62"
+            },
+            "players": [
+                {
+                    "name": "Teemu",
+                    "total": 78,
+                    "plusminus": 16,
+                    "score": [
+                        "2",
+                        "4",
+                        "4",
+                        "5",
+                        "5",
+                        "3",
+                        "5",
+                        "3",
+                        "4",
+                        "4",
+                        "6",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "5",
+                        "3",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 78,
+                    "rank": 6,
+                    "rankHC": 6
+                },
+                {
+                    "name": "Henkka",
+                    "total": 62,
+                    "plusminus": 0,
+                    "score": [
+                        "2",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "2",
+                        "5",
+                        "2",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 62,
+                    "rank": 2,
+                    "rankHC": 2
+                },
+                {
+                    "name": "Kimmo",
+                    "total": 71,
+                    "plusminus": 9,
+                    "score": [
+                        "2",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "5",
+                        "4",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 71,
+                    "rank": 5,
+                    "rankHC": 5
+                },
+                {
+                    "name": "Emma",
+                    "total": 80,
+                    "plusminus": 18,
+                    "score": [
+                        "3",
+                        "4",
+                        "3",
+                        "5",
+                        "4",
+                        "3",
+                        "4",
+                        "5",
+                        "5",
+                        "4",
+                        "5",
+                        "4",
+                        "4",
+                        "3",
+                        "4",
+                        "3",
+                        "4",
+                        "5",
+                        "4",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 80,
+                    "rank": 7,
+                    "rankHC": 7
+                },
+                {
+                    "name": "Jouni",
+                    "total": 60,
+                    "plusminus": -2,
+                    "score": [
+                        "2",
+                        "3",
+                        "2",
+                        "4",
+                        "2",
+                        "2",
+                        "3",
+                        "2",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "2",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 60,
+                    "rank": 1,
+                    "rankHC": 1
+                },
+                {
+                    "name": "Sampo",
+                    "total": 70,
+                    "plusminus": 8,
+                    "score": [
+                        "3",
+                        "3",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "6",
+                        "3",
+                        "6",
+                        "3",
+                        "3",
+                        "2",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 70,
+                    "rank": 3,
+                    "rankHC": 3
+                },
+                {
+                    "name": "Antti",
+                    "total": 70,
+                    "plusminus": 8,
+                    "score": [
+                        "3",
+                        "4",
+                        "4",
+                        "6",
+                        "3",
+                        "2",
+                        "4",
+                        "3",
+                        "4",
+                        "4",
+                        "4",
+                        "3",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "4",
+                        "3",
+                        "3",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "HC": 0,
+                    "totalHC": 70,
+                    "rank": 3,
+                    "rankHC": 3
+                }
+            ],
+            "match": true
+        }
+    ],
+    "hc": [
+        {
+            "course": {
+                "name": "Malminiitty",
+                "layout": "Niitty"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 6,
+                    "hc": 0.3333333333333333,
+                    "runningHc": 2
+                },
+                {
+                    "name": "Emma",
+                    "games": 6,
+                    "hc": 4.166666666666667,
+                    "runningHc": 25
+                },
+                {
+                    "name": "Antti",
+                    "games": 22,
+                    "hc": 0.045454545454545456,
+                    "runningHc": 1
+                },
+                {
+                    "name": "Henkka",
+                    "games": 29,
+                    "hc": -1.6551724137931034,
+                    "runningHc": -48
+                },
+                {
+                    "name": "Teemu",
+                    "games": 8,
+                    "hc": 3.375,
+                    "runningHc": 27
+                },
+                {
+                    "name": "Jouni",
+                    "games": 6,
+                    "hc": -2.5,
+                    "runningHc": -15
+                },
+                {
+                    "name": "Sampo",
+                    "games": 6,
+                    "hc": 2.6666666666666665,
+                    "runningHc": 16
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Ford Amateur DiscGolfPark (A1)",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 7,
+                    "hc": 3.5714285714285716,
+                    "runningHc": 25
+                },
+                {
+                    "name": "Antti",
+                    "games": 7,
+                    "hc": 4.857142857142857,
+                    "runningHc": 34
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 17,
+                    "runningHc": 17
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": -1,
+                    "runningHc": -1
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Siltamäki",
+                "layout": "Updated"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 8,
+                    "hc": 4.5,
+                    "runningHc": 36
+                },
+                {
+                    "name": "Antti",
+                    "games": 6,
+                    "hc": 8.333333333333334,
+                    "runningHc": 50
+                },
+                {
+                    "name": "Jouni",
+                    "games": 4,
+                    "hc": 0.5,
+                    "runningHc": 2
+                },
+                {
+                    "name": "Teemu",
+                    "games": 6,
+                    "hc": 11.166666666666666,
+                    "runningHc": 67
+                },
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 7,
+                    "runningHc": 7
+                },
+                {
+                    "name": "Sampo",
+                    "games": 2,
+                    "hc": 9,
+                    "runningHc": 18
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Ford DiscGolfPark",
+                "layout": "Talvi layout"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 5,
+                    "hc": 14.6,
+                    "runningHc": 73
+                },
+                {
+                    "name": "Antti",
+                    "games": 5,
+                    "hc": 18.2,
+                    "runningHc": 91
+                },
+                {
+                    "name": "Kimmo",
+                    "games": 2,
+                    "hc": 21,
+                    "runningHc": 42
+                },
+                {
+                    "name": "Emma",
+                    "games": 2,
+                    "hc": 29.5,
+                    "runningHc": 59
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 23,
+                    "runningHc": 23
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Simonkenttä",
+                "layout": "Classic"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 9,
+                    "runningHc": 9
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": 2,
+                    "runningHc": 6
+                },
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": 0.3333333333333333,
+                    "runningHc": 1
+                },
+                {
+                    "name": "Teemu",
+                    "games": 2,
+                    "hc": 6.5,
+                    "runningHc": 13
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Kirkkonummen MultiGolfPark",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": -4,
+                    "runningHc": -4
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Grani DiscGolfPark",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 7,
+                    "runningHc": 7
+                },
+                {
+                    "name": "Henkka",
+                    "games": 2,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Antti",
+                    "games": 2,
+                    "hc": 1,
+                    "runningHc": 2
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Laaksolahden FrisbeeGolfrata",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": -3,
+                    "runningHc": -3
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": -2,
+                    "runningHc": -2
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Päiväkumpu",
+                "layout": "10 Holes"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": -1.3333333333333333,
+                    "runningHc": -4
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": 3,
+                    "runningHc": 9
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Herusten Frisbeegolfrata ",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": 4.666666666666667,
+                    "runningHc": 14
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": 5.333333333333333,
+                    "runningHc": 16
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 13,
+                    "runningHc": 13
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": -1,
+                    "runningHc": -1
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Sahanmäki DiscGolfPark",
+                "layout": "Sahanmäki 20 väylää (2020)"
+            },
+            "players": [
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 41,
+                    "runningHc": 41
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 9,
+                    "runningHc": 9
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 17,
+                    "runningHc": 17
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Nikkilä DiscGolfPark",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 2,
+                    "hc": 4.5,
+                    "runningHc": 9
+                },
+                {
+                    "name": "Antti",
+                    "games": 2,
+                    "hc": 5.5,
+                    "runningHc": 11
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Kartanonkoski MultiGolfPark",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": -1,
+                    "runningHc": -1
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": -3,
+                    "runningHc": -3
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": -3,
+                    "runningHc": -3
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Söderkullan frisbeegolfrata",
+                "layout": "Main 2018"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": 3,
+                    "runningHc": 9
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": 3.6666666666666665,
+                    "runningHc": 11
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Söderkullan Kartano ",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": -4,
+                    "runningHc": -12
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": -2,
+                    "runningHc": -6
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Oittaan Ulkoilualue",
+                "layout": "Oittaa Frisbeegolf Espoo - Kalliometsä (18 väylää)"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 4,
+                    "hc": 0.75,
+                    "runningHc": 3
+                },
+                {
+                    "name": "Antti",
+                    "games": 4,
+                    "hc": 1.75,
+                    "runningHc": 7
+                },
+                {
+                    "name": "Jouni",
+                    "games": 3,
+                    "hc": -3.6666666666666665,
+                    "runningHc": -11
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Lemmenlaakson Frisbeegolfrata",
+                "layout": "2020 Layout"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 2,
+                    "hc": 10,
+                    "runningHc": 20
+                },
+                {
+                    "name": "Antti",
+                    "games": 2,
+                    "hc": 16,
+                    "runningHc": 32
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Meilahden kiekkogolfrata",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 12,
+                    "runningHc": 12
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 14,
+                    "runningHc": 14
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Munkkiniemi",
+                "layout": "Munkkiniemi 19"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 5,
+                    "runningHc": 5
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Kivikko Frisbeegolf Park",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 15,
+                    "runningHc": 15
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 4,
+                    "runningHc": 4
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Varistonniitty",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 32,
+                    "runningHc": 32
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 7,
+                    "runningHc": 7
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 11,
+                    "runningHc": 11
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 21,
+                    "runningHc": 21
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Talin Frisbeegolfpuisto",
+                "layout": "Pro Tour Tali 2020"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 22,
+                    "runningHc": 22
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 29,
+                    "runningHc": 29
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 23,
+                    "runningHc": 23
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 23,
+                    "runningHc": 23
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 16,
+                    "runningHc": 16
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Nurmijärven Frisbeegolfrata",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": 11.333333333333334,
+                    "runningHc": 34
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": 16.666666666666668,
+                    "runningHc": 50
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 7,
+                    "runningHc": 7
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Keinukallio Discgolf",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 32,
+                    "runningHc": 32
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 53,
+                    "runningHc": 53
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 22,
+                    "runningHc": 22
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 26,
+                    "runningHc": 26
+                },
+                {
+                    "name": "Henkka",
+                    "games": 2,
+                    "hc": 21,
+                    "runningHc": 42
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 33,
+                    "runningHc": 33
+                },
+                {
+                    "name": "Sampo",
+                    "games": 1,
+                    "hc": 38,
+                    "runningHc": 38
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Puolarmaari",
+                "layout": "Standard"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 14,
+                    "runningHc": 14
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 13,
+                    "runningHc": 13
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 9,
+                    "runningHc": 9
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Röyläntuvan Frisbeegolfkenttä",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 6,
+                    "runningHc": 6
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 2,
+                    "runningHc": 2
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Riutta DiscGolfPark",
+                "layout": "19 väylää (2020)"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 21,
+                    "runningHc": 21
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 15,
+                    "runningHc": 15
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 11,
+                    "runningHc": 11
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Paloaseman Puisto DiscGolfPark",
+                "layout": "2018"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 2,
+                    "runningHc": 2
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 1,
+                    "runningHc": 1
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 1,
+                    "runningHc": 1
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Pohjolan Rinteen Puisto",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": -1,
+                    "runningHc": -1
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Jokipuiston Koulun DiscGolfPark",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 3,
+                    "hc": -3,
+                    "runningHc": -9
+                },
+                {
+                    "name": "Antti",
+                    "games": 3,
+                    "hc": -1,
+                    "runningHc": -3
+                },
+                {
+                    "name": "Jouni",
+                    "games": 2,
+                    "hc": -3,
+                    "runningHc": -6
+                },
+                {
+                    "name": "Teemu",
+                    "games": 2,
+                    "hc": 0,
+                    "runningHc": 0
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Lentolan Frisbeegolf",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Kimmo",
+                    "games": 2,
+                    "hc": 0.5,
+                    "runningHc": 1
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 5,
+                    "runningHc": 5
+                },
+                {
+                    "name": "Antti",
+                    "games": 5,
+                    "hc": -0.4,
+                    "runningHc": -2
+                },
+                {
+                    "name": "Jouni",
+                    "games": 3,
+                    "hc": -1,
+                    "runningHc": -3
+                },
+                {
+                    "name": "Henkka",
+                    "games": 7,
+                    "hc": -2.7142857142857144,
+                    "runningHc": -19
+                },
+                {
+                    "name": "Teemu",
+                    "games": 2,
+                    "hc": 1.5,
+                    "runningHc": 3
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Sibbe Disc Golf",
+                "layout": "Ford Hybrid layout 2021 (blue)"
+            },
+            "players": [
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 38,
+                    "runningHc": 38
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 12,
+                    "runningHc": 12
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 15,
+                    "runningHc": 15
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Talma DGP",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 2,
+                    "runningHc": 2
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 10,
+                    "runningHc": 10
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 13,
+                    "runningHc": 13
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 9,
+                    "runningHc": 9
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Separisimppa",
+                "layout": "Custom"
+            },
+            "players": [
+                {
+                    "name": "Sampo",
+                    "games": 1,
+                    "hc": 3,
+                    "runningHc": 3
+                },
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 4,
+                    "runningHc": 4
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": -2,
+                    "runningHc": -2
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 4,
+                    "runningHc": 4
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 3,
+                    "runningHc": 3
+                },
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 4,
+                    "runningHc": 4
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Äijänpelto Frisbeegolf",
+                "layout": "Main"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 2,
+                    "hc": 19.5,
+                    "runningHc": 39
+                },
+                {
+                    "name": "Antti",
+                    "games": 2,
+                    "hc": 19,
+                    "runningHc": 38
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Pornainen DiscGolfPark",
+                "layout": "B-Kierros"
+            },
+            "players": [
+                {
+                    "name": "Henkka",
+                    "games": 2,
+                    "hc": 1.5,
+                    "runningHc": 3
+                },
+                {
+                    "name": "Antti",
+                    "games": 2,
+                    "hc": 3,
+                    "runningHc": 6
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Rajamäen Frisbeegolfrata",
+                "layout": "Päivitetty 8.7.2018"
+            },
+            "players": [
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": 2,
+                    "runningHc": 2
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 5,
+                    "runningHc": 5
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 5,
+                    "runningHc": 5
+                }
+            ]
+        },
+        {
+            "course": {
+                "name": "Supersimppari",
+                "layout": "Custom"
+            },
+            "players": [
+                {
+                    "name": "Teemu",
+                    "games": 1,
+                    "hc": 16,
+                    "runningHc": 16
+                },
+                {
+                    "name": "Henkka",
+                    "games": 1,
+                    "hc": 0,
+                    "runningHc": 0
+                },
+                {
+                    "name": "Kimmo",
+                    "games": 1,
+                    "hc": 9,
+                    "runningHc": 9
+                },
+                {
+                    "name": "Emma",
+                    "games": 1,
+                    "hc": 18,
+                    "runningHc": 18
+                },
+                {
+                    "name": "Jouni",
+                    "games": 1,
+                    "hc": -2,
+                    "runningHc": -2
+                },
+                {
+                    "name": "Sampo",
+                    "games": 1,
+                    "hc": 8,
+                    "runningHc": 8
+                },
+                {
+                    "name": "Antti",
+                    "games": 1,
+                    "hc": 8,
+                    "runningHc": 8
+                }
+            ]
+        }
+    ]
+}
