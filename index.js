@@ -2,13 +2,12 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 const parse = require('./testi');
-
+const games = require('./games.json')
 app.use(cors())
 
 app.use( express.static('build'))
 
 app.get('/api/games', async (req, res) => {
-    const { games } = await parse()
     res.json( games )
 })
 app.get('/api/courses', async( req, res) => {
