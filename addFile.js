@@ -2,111 +2,109 @@
 const fs = require('fs').promises;
 const util = require('util')
 
-let games
+const MIN_NUMBER_OF_PLAYERS_FOR_HC = 2;    // Min pelaajamäärä handicap laskuun
+const MIN_NUMBER_OF_PLAYERS_FOR_MATCH = 5;    // Min pelaajamäärä kisaan
+const PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni"]
+const ALLOW_YEAR = '2021'
+const HYLATYT_PELAAJAT = new Map()
+
+let data
 try {
-    games = require('./games.json')
-    console.log('games.json,', games.length, 'peliä.')
+    data = require('./games.json')
+    console.log('games.json,', data.games.length, 'peliä.')
 } catch (e) {
     console.log('games.json tiedostoa ei löydy.')
-    games = []
+    data = { games: [], hc: [] }
 }
 
-const parse = async () => {
+const parse = async (fileName) => {
     let rawData
+    const dataMap = new Map()
+
     try {
-        rawData = await fs.readFile(process.argv[2], 'utf-8')
-    } catch(e) {
+        rawData = await fs.readFile(fileName, 'utf-8')
+    } catch (e) {
         console.log(e)
         return
     }
-    
-    const data = rawData.split('\n').reverse();
-
-    const courses = []
-    const players = {
-        Henkka: {},
-        Antti: {},
-        Teemu: {},
-        Kimmo: {},
-        Emma: {},
-        Saku: {},
-        Jouni: {},
-        Sampo: {},
-        Henu: {}
+    // Haetaan olemassaolevien pelien "avaimet"
+    for (const game of data.games) {
+        dataMap.set(game.course.date + game.course.name, true)
     }
+    let game = { players: [], course: {} }
+    for (const line of rawData.split('\n')) {
+        const [player, course, layout, date, total, plusminus, ...score] = line.split(',')
 
-    let currentGame = { course: { name: '', date: '' }, players: [] }
-
-    const dateSet = new Map()
-    for (const game of games) {
-        dateSet.set( game.course.date+game.course.name, true)
-    }
-    let hylatty = 0
-    for (let i = 0; i < data.length; i++) {
-        let [name, courseName, layout, date, total, plusminus, ...score] = data[i].split(',');
-        if (name === 'Saikkis') name = 'Antti'
-        if (!(name in players) || !date.startsWith('2021')) {
-            continue;
-        } else if ( dateSet.get(date+courseName) === true) {
-            hylatty++
+        if (!date || !date.startsWith(ALLOW_YEAR) || dataMap.get(date + course) === true) {
             continue;
         }
-        if (date !== currentGame.course.date) {
-            if (currentGame.players.length >= 2) {
 
-                let courseStats = courses.find(c => (c.name === currentGame.course.name && c.layout === currentGame.course.layout))
-                if (!courseStats) {
-                    courseStats = { name: currentGame.course.name, layout: currentGame.course.layout, games: 0, players: [] }
-                    courses.push(courseStats)
-                }
-
-                for (let playerObj of currentGame.players) {        // Laske Handicapit
-
-                    let coursesPlayerObj = courseStats.players.find(p => p.name === playerObj.name)
-                    if (!coursesPlayerObj) {
-                        coursesPlayerObj = { name: playerObj.name, runningHC: 0, HC: 0, games: 0 }
-                        courseStats.players.push(coursesPlayerObj)
-                    }
-
-                    playerObj['HC'] = coursesPlayerObj.HC || 0
-                    playerObj['totalHC'] = Number(playerObj['total']) - playerObj.HC
-
-                    coursesPlayerObj.runningHC += Number(playerObj.plusminus)
-                    coursesPlayerObj.games++
-                    coursesPlayerObj.HC = coursesPlayerObj.runningHC / coursesPlayerObj.games
-                }
-                if (currentGame.players.length >= 5) {
-                    games.push(currentGame)
-                    for (let playerObj of currentGame.players) {        // Laske rankingit
-                        const rank = currentGame.players.reduce((p, c) => {
-                            if (playerObj.total > c.total) p.total++
-                            if (playerObj.totalHC > c.totalHC) p.hc++
-                            return p;
-                        }, { total: 1, hc: 1 })
-                        playerObj['rank'] = rank.total
-                        playerObj['rankHC'] = rank.hc
-                    }
-                }
-         
+        if (player === 'Par') {
+            if (game.players.length >= MIN_NUMBER_OF_PLAYERS_FOR_HC) {
+                game['match'] = (game.players.length >= MIN_NUMBER_OF_PLAYERS_FOR_MATCH)
+                data.games.push(game)
             }
-            currentGame = { course: { name: courseName, date, layout }, players: [] }
-        }
-        currentGame.players.push({ name, score, total: Number(total), plusminus: Number(plusminus) })
+            game = {
+                course: {
+                    name: course,
+                    layout,
+                    date,
+                    par: total
+                },
+                players: []
+            }
+        } else if (PLAYERS.includes(player)) {
+            game.players.push({ name: player, total: Number(total), plusminus: Number(plusminus), score })
+        } else HYLATYT_PELAAJAT.set(player, HYLATYT_PELAAJAT.get(player) + 1 || 1)
 
     }
-    //console.log( util.inspect(courses, true, null, true) )
-    //console.log(util.inspect(games, true, null, true))
-    console.log('Järjestetään...')
-    games = games.sort( (a,b) => {
-        return new Date(b.course.date).getTime() - new Date(b.course.date).getTime() 
-    })
-    console.log('Kirjoitetaan tiedostoon...\n')
-    fs.writeFile('games.json', JSON.stringify(games), 'utf-8' )
+    // Järjestetään pelit
+    data.games.sort((a, b) => new Date(a.course.date).getTime() - new Date(b.course.date).getTime())
 
-    console.log('Pelien määrä', games.length)
-    console.log('Hylättyjä tuloksia', hylatty)
+    // Lasketaan Handicapit
+    data.hc = []
+    for (const game of data.games) {
+        let courseHC = data.hc.find(c => c.course.name === game.course.name)
 
+        if (!courseHC) {   // Jos rataa ei ole listalla, luodaan
+            courseHC = { course: { name: game.course.name, layout: game.course.layout }, players: [] }
+            data.hc.push(courseHC)
+        }
+        for (const player of game.players) {
+            let playerHC = courseHC.players.find(p => p.name === player.name)
+            if (!playerHC) {
+                playerHC = { name: player.name, games: 0, hc: 0, runningHc: 0 }
+                courseHC.players.push(playerHC)
+            }
+            player['HC'] = playerHC.hc
+            player['totalHC'] = player.total - playerHC.hc
+            
+            playerHC.games++
+            playerHC.runningHc += player.plusminus
+            playerHC.hc = playerHC.runningHc / playerHC.games || 0
+        }
+        for (const player of game.players) {
+            let rank = 1
+            let rankHC = 1
+            for(const otherPlayer of game.players) {
+                if (otherPlayer.total < player.total) rank++
+                if (otherPlayer.totalHC < player.totalHC) rankHC++
+            }
+            player['rank'] = rank
+            player['rankHC'] = rankHC
+        }
+
+    }
+
+    // Filteröidään ei-kilpailut pois
+    console.log('Filterin...\n')
+    data.games = data.games.filter( g => g.match === true )
+
+    fs.writeFile('games.json', JSON.stringify(data), 'utf-8')
+    console.log('Yhteensä', data.games.length, 'peliä')
+    //console.log(util.inspect(data.games, true, null, true))
 }
 
-parse()
+for (let i = 2; i < process.argv.length; i++) 
+    parse(process.argv[i])
 
