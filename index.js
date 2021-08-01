@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors')
 const app = express();
-const parse = require('./testi');
 const games = require('./games.json')
 app.use(cors())
 
