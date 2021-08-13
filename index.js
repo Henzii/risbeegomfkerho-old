@@ -8,7 +8,7 @@ app.use(cors())
 app.use( express.static('build'))
 
 app.get('/api/games', async (req, res) => {
-    res.json( games.games )
+    res.json( games.games.filter(g => g.match === true) )
 })
 app.get('/api/courses', async( req, res) => {
     res.json( games.hc )

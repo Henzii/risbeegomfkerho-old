@@ -3,6 +3,7 @@ const fs = require('fs').promises;
 const util = require('util')
 
 const parse = async (fileName) => {
+
     const MIN_NUMBER_OF_PLAYERS_FOR_HC = 2;    // Min pelaajamäärä handicap laskuun
     const MIN_NUMBER_OF_PLAYERS_FOR_MATCH = 5;    // Min pelaajamäärä kisaan
     const PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni"]
@@ -59,6 +60,7 @@ const parse = async (fileName) => {
             }
         } else if (PLAYERS.includes(player)) {
             palautus.uusia++;
+            console.log('Uusi: ' + line)
             game.players.push({ name: player, total: Number(total), plusminus: Number(plusminus), score })
         } else HYLATYT_PELAAJAT.set(player, HYLATYT_PELAAJAT.get(player) + 1 || 1)
 
@@ -102,7 +104,7 @@ const parse = async (fileName) => {
     }
 
     // Filteröidään ei-kilpailut pois
-    data.games = data.games.filter(g => g.match === true)
+    //data.games = data.games.filter(g => g.match === true)
     palautus['lopussa'] = data.games.length
     fs.writeFile('games.json', JSON.stringify(data), 'utf-8')
     //palautus['hylatytPelaajat'] = [...HYLATYT_PELAAJAT];
