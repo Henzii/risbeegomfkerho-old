@@ -9,15 +9,15 @@ const parse = async (fileName) => {
     const ALLOW_YEAR = '2021'
     const HYLATYT_PELAAJAT = new Map()
     
-    const palautus = {}
+    const palautus = { uusia: 0 }
 
     let data = null
     try {
         data = require('./games.json')
-        //console.log('games.json,', data.games.length, 'peliä.')
+        console.log('games.json,', data.games.length, 'peliä.')
         palautus['alussa'] = data.games.length;
     } catch (e) {
-        //console.log('games.json tiedostoa ei löydy.')
+        console.log('games.json tiedostoa ei löydy.')
         data = { games: [], hc: [] }
         palautus['alussa'] = 0
     }
@@ -58,6 +58,7 @@ const parse = async (fileName) => {
                 players: []
             }
         } else if (PLAYERS.includes(player)) {
+            palautus.uusia++;
             game.players.push({ name: player, total: Number(total), plusminus: Number(plusminus), score })
         } else HYLATYT_PELAAJAT.set(player, HYLATYT_PELAAJAT.get(player) + 1 || 1)
 
@@ -104,7 +105,7 @@ const parse = async (fileName) => {
     data.games = data.games.filter(g => g.match === true)
     palautus['lopussa'] = data.games.length
     fs.writeFile('games.json', JSON.stringify(data), 'utf-8')
-    palautus['hylatytPelaajat'] = [...HYLATYT_PELAAJAT];
+    //palautus['hylatytPelaajat'] = [...HYLATYT_PELAAJAT];
     
     console.table(palautus);
     return palautus;
