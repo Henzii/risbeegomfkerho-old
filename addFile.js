@@ -2,22 +2,25 @@
 const fs = require('fs').promises;
 const util = require('util')
 
-const MIN_NUMBER_OF_PLAYERS_FOR_HC = 2;    // Min pelaajamäärä handicap laskuun
-const MIN_NUMBER_OF_PLAYERS_FOR_MATCH = 5;    // Min pelaajamäärä kisaan
-const PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni"]
-const ALLOW_YEAR = '2021'
-const HYLATYT_PELAAJAT = new Map()
-
-let data = null
-try {
-    data = require('./games.json')
-    console.log('games.json,', data.games.length, 'peliä.')
-} catch (e) {
-    console.log('games.json tiedostoa ei löydy.')
-    data = { games: [], hc: [] }
-}
-
 const parse = async (fileName) => {
+    const MIN_NUMBER_OF_PLAYERS_FOR_HC = 2;    // Min pelaajamäärä handicap laskuun
+    const MIN_NUMBER_OF_PLAYERS_FOR_MATCH = 5;    // Min pelaajamäärä kisaan
+    const PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni"]
+    const ALLOW_YEAR = '2021'
+    const HYLATYT_PELAAJAT = new Map()
+    
+    const palautus = {}
+
+    let data = null
+    try {
+        data = require('./games.json')
+        //console.log('games.json,', data.games.length, 'peliä.')
+        palautus['alussa'] = data.games.length;
+    } catch (e) {
+        //console.log('games.json tiedostoa ei löydy.')
+        data = { games: [], hc: [] }
+        palautus['alussa'] = 0
+    }
     let rawData
     const dataMap = new Map()
 
@@ -79,7 +82,7 @@ const parse = async (fileName) => {
             }
             player['HC'] = playerHC.hc
             player['totalHC'] = player.total - playerHC.hc
-            
+
             playerHC.games++
             playerHC.runningHc += player.plusminus
             playerHC.hc = playerHC.runningHc / playerHC.games || 0
@@ -87,7 +90,7 @@ const parse = async (fileName) => {
         for (const player of game.players) {
             let rank = 1
             let rankHC = 1
-            for(const otherPlayer of game.players) {
+            for (const otherPlayer of game.players) {
                 if (otherPlayer.total < player.total) rank++
                 if (otherPlayer.totalHC < player.totalHC) rankHC++
             }
@@ -98,14 +101,16 @@ const parse = async (fileName) => {
     }
 
     // Filteröidään ei-kilpailut pois
-    console.log('Filterin...\n')
-    data.games = data.games.filter( g => g.match === true )
-
+    data.games = data.games.filter(g => g.match === true)
+    palautus['lopussa'] = data.games.length
     fs.writeFile('games.json', JSON.stringify(data), 'utf-8')
-    console.log('Yhteensä', data.games.length, 'peliä')
-    //console.log(util.inspect(data.games, true, null, true))
+    palautus['hylatytPelaajat'] = [...HYLATYT_PELAAJAT];
+    
+    console.table(palautus);
+    return palautus;
+    
 }
 
-for (let i = 2; i < process.argv.length; i++) 
+for (let i = 2; i < process.argv.length; i++)
     parse(process.argv[i])
 
