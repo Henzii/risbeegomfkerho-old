@@ -22,8 +22,10 @@ const parseUploadedFile_1 = require("./utils/parseUploadedFile");
 const app = express_1.default();
 let user = 'Unknown';
 let gameData;
-if ('games' in games_json_1.default && 'hc' in games_json_1.default)
+if ('games' in games_json_1.default || 'hc' in games_json_1.default)
     gameData = games_json_1.default;
+else
+    gameData = { games: [], hc: [] };
 const storage = multer_1.default.diskStorage({
     destination: (_req, _file, cb) => cb(null, './data'),
     filename: (_req, _file_, cb) => cb(null, `${user}.csv`)
@@ -31,8 +33,17 @@ const storage = multer_1.default.diskStorage({
 const upload = multer_1.default({ storage: storage });
 dotenv_1.default.config();
 app.use(cors_1.default());
-app.use(express_1.default.static('build'));
 app.use(express_1.default.json());
+// Heroku force https
+if (process.env.NODE_ENV === 'production') {
+    app.use((req, res, next) => {
+        if (req.header('x-forwarded-proto') !== 'https')
+            res.redirect(`https://${req.header('host')}${req.url}`);
+        else
+            next();
+    });
+}
+app.use(express_1.default.static('build'));
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     if (password === process.env.SEC_PASSWORD) {
@@ -44,21 +55,24 @@ app.post('/login', (req, res) => {
         res.status(401).end();
     }
 });
+//////////////////////////////////////////////////////////////
+// !! Tästä eteenpäin 401:stä jos ei ole validia tokenia !! //
+//////////////////////////////////////////////////////////////
 app.use((req, res, next) => {
     var _a;
     const auth = (_a = req.get('authorization')) === null || _a === void 0 ? void 0 : _a.slice(7);
     try {
         user = jsonwebtoken_1.default.verify(auth, process.env.TOKEN_KEY);
-        console.log(`${req.method} ${req.path} ${user}`);
+        console.log(`${req.secure} ${req.method} ${req.path} ${user}`);
         next();
     }
     catch (e) {
-        console.log(`${req.method} ${req.path} Estetty! (${user})`);
+        console.log(`${req.secure} ${req.method} ${req.path} Epäkelpo token, estetty! (${user})`);
         res.status(401).end();
     }
 });
 app.post('/upload', upload.single('filu'), (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const parseta = yield parseUploadedFile_1.parseUploadedFile(`./data/${user}.csv`);
+    const parseta = yield parseUploadedFile_1.parseUploadedFile(`./data/${user}.csv`, user);
     res.json(parseta);
 }));
 app.get('/api/games', (_req, res) => {
@@ -68,5 +82,5 @@ app.get('/api/hc', (_req, res) => {
     res.json(gameData.hc);
 });
 const PORT = process.env.PORT || 3001;
-console.log('Portissa' + PORT);
+console.log('Portissa ' + PORT);
 app.listen(PORT);
