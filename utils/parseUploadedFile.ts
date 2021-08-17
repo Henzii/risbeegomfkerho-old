@@ -9,7 +9,7 @@ import { calculateHandicaps } from './calculateHandicaps';
 const SCORES_AFTER = '2021';
 const MIN_PLAYER_COUNT = 2;
 const MIN_PLAYER_COUNT_MATCH = 5;
-const ALLOWED_PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni"];
+const ALLOWED_PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni", "Ile", "Henu", "Saku"];
 
 export const parseUploadedFile = async (filename: string, fromUser = '') => {
 

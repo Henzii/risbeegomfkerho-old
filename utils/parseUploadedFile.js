@@ -20,7 +20,7 @@ const calculateHandicaps_1 = require("./calculateHandicaps");
 const SCORES_AFTER = '2021';
 const MIN_PLAYER_COUNT = 2;
 const MIN_PLAYER_COUNT_MATCH = 5;
-const ALLOWED_PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni"];
+const ALLOWED_PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni", "Ile", "Henu", "Saku"];
 const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0, void 0, function* () {
     let gameData;
     if (!('games' in games_json_1.default))
