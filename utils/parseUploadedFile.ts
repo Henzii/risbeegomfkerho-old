@@ -5,18 +5,15 @@ import { removeDuplicates } from './removeDuplicates';
 
 import rawData from '../data/games.json';
 import { calculateHandicaps } from './calculateHandicaps';
-
+import setup from './parser.config..json';
 const SCORES_AFTER = '2021';
-const MIN_PLAYER_COUNT = 2;
-const MIN_PLAYER_COUNT_MATCH = 5;
-const ALLOWED_PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni", "Ile", "Henu", "Saku"];
 
 export const parseUploadedFile = async (filename: string, fromUser = '') => {
 
     let gameData: JSONdata;
 
     if (!('games' in rawData)) gameData = { games: new Array<Peli>(), hc: new Array<hcTable>() };
-    else gameData = rawData as JSONdata;
+    else gameData = rawData as unknown as JSONdata;
 
     const fileData = await fs.readFile(filename, 'utf-8') as unknown as string;
     const rivit = fileData.split('\n');
@@ -39,12 +36,14 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
         // eslint-disable-next-line prefer-const
         let [player, course, layout, date, total, plusminus, ...score] = rivi.split(',');
 
-        if (player === 'Saikkis') player = 'Antti';
+        if (player === 'Saikkis') player="Antti";
+        if (player === "Ilkka" || player === "Ilkka Davidsen") player = "Ile";
+
         if (player === '' || date === '') continue;
 
         if (player === 'Par') {
-            if (peli.players.length >= MIN_PLAYER_COUNT) {
-                peli.match = peli.players.length >= MIN_PLAYER_COUNT_MATCH;
+            if (peli.players.length >= setup.minPlayersForHc) {
+                peli.match = peli.players.length >= setup.minPlayersForMatch;
                 if (fromUser !== '') peli['fromUser'] = fromUser;
                 pelit.push(peli);
             }
@@ -52,7 +51,7 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
             peli.course = { name: course, layout, date, par: total };
         } else if (!date.startsWith(SCORES_AFTER)) {
             palautus.ignored.wrongDate++;
-        } else if (!ALLOWED_PLAYERS.includes(player)) {
+        } else if (!setup.allowedPlayers.includes(player)) {
             palautus.ignored.wrongName.count++;
             if (!palautus.ignored.wrongName.names.includes(player))
                 palautus.ignored.wrongName.names.push(player);

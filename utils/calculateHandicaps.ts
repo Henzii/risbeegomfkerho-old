@@ -1,5 +1,7 @@
 import { Peli, hcTable, PlayerHC } from "../types";
 
+import setup from './parser.config..json';
+
 export const calculateHandicaps = (pelit: Array<Peli>): Array<hcTable> => {
 
     if (pelit.length < 1) throw Error('Pelit on tyhjä perkele!');
@@ -21,7 +23,7 @@ export const calculateHandicaps = (pelit: Array<Peli>): Array<hcTable> => {
             //Etsi pelaaja radan listalta tai luo uusi
             const player = rataObj.players.find(p => p.name === pelaaja.name);
             if (!player) {
-                 pelaajaObj = { name: pelaaja.name, games: 0, hc: 0, runningHc: 0};
+                 pelaajaObj = { name: pelaaja.name, games: 0, hc: 0, lastRounds: [], median: 0, average: 0 };
                  rataObj.players.push(pelaajaObj);
             } else pelaajaObj = player;
             
@@ -31,8 +33,11 @@ export const calculateHandicaps = (pelit: Array<Peli>): Array<hcTable> => {
 
             // Päivitä Handicapit
             pelaajaObj.games++;
-            pelaajaObj.runningHc += pelaaja.plusminus;
-            pelaajaObj.hc = pelaajaObj.runningHc / pelaajaObj.games;
+            pelaajaObj.lastRounds.push( pelaaja.plusminus );
+            pelaajaObj.median = median(pelaajaObj.lastRounds);
+            pelaajaObj.average = pelaajaObj.lastRounds.reduce( (p, c) => p+c, 0) / pelaajaObj.lastRounds.length;
+            if (pelaajaObj.lastRounds.length > setup.lastRoundsCount ) pelaajaObj.lastRounds.shift();
+            pelaajaObj.hc = pelaajaObj.median;
         }
 
         // Lasketaan rankingit jokaiselle pelaajalle
@@ -47,4 +52,10 @@ export const calculateHandicaps = (pelit: Array<Peli>): Array<hcTable> => {
         }
     } 
     return hcTable;
+};
+const median = (arvot: Array<number>):number => {
+    const pituus = arvot.length;
+    if (pituus === 0) return 0;
+    if (pituus % 2 === 0) return ( (arvot[pituus/2-1]+arvot[pituus/2]) / 2);
+    else return arvot[Math.floor(pituus/2)];
 };

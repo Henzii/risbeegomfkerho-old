@@ -1,0 +1,18 @@
+{
+    "minPlayersForHc": 2,
+    "minPlayersForMatch": 5,
+    "lastRoundsCount": 10,
+    "allowedPlayers": [
+        "Henkka",
+        "Antti",
+        "Saikkis",
+        "Ile",
+        "Jouni",
+        "Emma",
+        "Kimmo",
+        "Saku",
+        "Henu",
+        "Teemu",
+        "Sampo"
+    ]
+}

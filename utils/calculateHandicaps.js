@@ -1,6 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calculateHandicaps = void 0;
+const parser_config__json_1 = __importDefault(require("./parser.config..json"));
 const calculateHandicaps = (pelit) => {
     if (pelit.length < 1)
         throw Error('Pelit on tyhjä perkele!');
@@ -20,7 +24,7 @@ const calculateHandicaps = (pelit) => {
             //Etsi pelaaja radan listalta tai luo uusi
             const player = rataObj.players.find(p => p.name === pelaaja.name);
             if (!player) {
-                pelaajaObj = { name: pelaaja.name, games: 0, hc: 0, runningHc: 0 };
+                pelaajaObj = { name: pelaaja.name, games: 0, hc: 0, lastRounds: [], median: 0, average: 0 };
                 rataObj.players.push(pelaajaObj);
             }
             else
@@ -30,8 +34,12 @@ const calculateHandicaps = (pelit) => {
             pelaaja.HC = pelaajaObj.hc;
             // Päivitä Handicapit
             pelaajaObj.games++;
-            pelaajaObj.runningHc += pelaaja.plusminus;
-            pelaajaObj.hc = pelaajaObj.runningHc / pelaajaObj.games;
+            pelaajaObj.lastRounds.push(pelaaja.plusminus);
+            pelaajaObj.median = median(pelaajaObj.lastRounds);
+            pelaajaObj.average = pelaajaObj.lastRounds.reduce((p, c) => p + c, 0) / pelaajaObj.lastRounds.length;
+            if (pelaajaObj.lastRounds.length > parser_config__json_1.default.lastRoundsCount)
+                pelaajaObj.lastRounds.shift();
+            pelaajaObj.hc = pelaajaObj.median;
         }
         // Lasketaan rankingit jokaiselle pelaajalle
         for (const pelaaja of peli.players) {
@@ -49,3 +57,12 @@ const calculateHandicaps = (pelit) => {
     return hcTable;
 };
 exports.calculateHandicaps = calculateHandicaps;
+const median = (arvot) => {
+    const pituus = arvot.length;
+    if (pituus === 0)
+        return 0;
+    if (pituus % 2 === 0)
+        return ((arvot[pituus / 2 - 1] + arvot[pituus / 2]) / 2);
+    else
+        return arvot[Math.floor(pituus / 2)];
+};

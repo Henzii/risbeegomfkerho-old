@@ -52,6 +52,7 @@ app.post('/login', (req, res) => {
         res.json(token);
     }
     else {
+        console.log(`Väärä salasana, ${username} / ${password}`);
         res.status(401).end();
     }
 });

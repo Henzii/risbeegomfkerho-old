@@ -26,7 +26,9 @@ export interface PlayerHC {
     name: string,
     games: number,
     hc: number,
-    runningHc: number
+    lastRounds: Array<number>,
+    median: number,
+    average: number
 }
 export interface Credentials {
     username: string,

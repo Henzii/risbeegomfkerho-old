@@ -17,10 +17,8 @@ const promises_1 = __importDefault(require("fs/promises"));
 const removeDuplicates_1 = require("./removeDuplicates");
 const games_json_1 = __importDefault(require("../data/games.json"));
 const calculateHandicaps_1 = require("./calculateHandicaps");
+const parser_config__json_1 = __importDefault(require("./parser.config..json"));
 const SCORES_AFTER = '2021';
-const MIN_PLAYER_COUNT = 2;
-const MIN_PLAYER_COUNT_MATCH = 5;
-const ALLOWED_PLAYERS = ["Henkka", "Antti", "Saikkis", "Teemu", "Sampo", "Emma", "Kimmo", "Jouni", "Ile", "Henu", "Saku"];
 const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0, void 0, function* () {
     let gameData;
     if (!('games' in games_json_1.default))
@@ -46,14 +44,14 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
         // eslint-disable-next-line prefer-const
         let [player, course, layout, date, total, plusminus, ...score] = rivi.split(',');
         if (player === 'Saikkis')
-            player = 'Antti';
-        else if (player === 'Ilkka' || player === 'Ilkka Davidsen')
-            player = 'Ile';
+            player = "Antti";
+        if (player === "Ilkka" || player === "Ilkka Davidsen")
+            player = "Ile";
         if (player === '' || date === '')
             continue;
         if (player === 'Par') {
-            if (peli.players.length >= MIN_PLAYER_COUNT) {
-                peli.match = peli.players.length >= MIN_PLAYER_COUNT_MATCH;
+            if (peli.players.length >= parser_config__json_1.default.minPlayersForHc) {
+                peli.match = peli.players.length >= parser_config__json_1.default.minPlayersForMatch;
                 if (fromUser !== '')
                     peli['fromUser'] = fromUser;
                 pelit.push(peli);
@@ -64,7 +62,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
         else if (!date.startsWith(SCORES_AFTER)) {
             palautus.ignored.wrongDate++;
         }
-        else if (!ALLOWED_PLAYERS.includes(player)) {
+        else if (!parser_config__json_1.default.allowedPlayers.includes(player)) {
             palautus.ignored.wrongName.count++;
             if (!palautus.ignored.wrongName.names.includes(player))
                 palautus.ignored.wrongName.names.push(player);
