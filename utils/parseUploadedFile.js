@@ -47,6 +47,8 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
         let [player, course, layout, date, total, plusminus, ...score] = rivi.split(',');
         if (player === 'Saikkis')
             player = 'Antti';
+        else if (player === 'Ilkka' || player === 'Ilkka Davidsen')
+            player = 'Ile';
         if (player === '' || date === '')
             continue;
         if (player === 'Par') {
