@@ -34,9 +34,9 @@ export const calculateHandicaps = (pelit: Array<Peli>): Array<hcTable> => {
             // Päivitä Handicapit
             pelaajaObj.games++;
             pelaajaObj.lastRounds.push( pelaaja.plusminus );
+            if (pelaajaObj.lastRounds.length > setup.lastRoundsCount ) pelaajaObj.lastRounds.shift();
             pelaajaObj.median = median(pelaajaObj.lastRounds);
             pelaajaObj.average = pelaajaObj.lastRounds.reduce( (p, c) => p+c, 0) / pelaajaObj.lastRounds.length;
-            if (pelaajaObj.lastRounds.length > setup.lastRoundsCount ) pelaajaObj.lastRounds.shift();
             pelaajaObj.hc = pelaajaObj.median;
         }
 
@@ -53,7 +53,10 @@ export const calculateHandicaps = (pelit: Array<Peli>): Array<hcTable> => {
     } 
     return hcTable;
 };
-const median = (arvot: Array<number>):number => {
+const median = (data: Array<number>):number => {
+    const arvot = [...data];
+    arvot.sort((a,b) => a-b);
+    console.log(arvot);
     const pituus = arvot.length;
     if (pituus === 0) return 0;
     if (pituus % 2 === 0) return ( (arvot[pituus/2-1]+arvot[pituus/2]) / 2);

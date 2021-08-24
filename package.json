@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --ignore-watch data index.ts",
     "start": "node index.js",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "deploy": "rmdir build /s /q && xcopy ..\\risbeegomfkerho-app\\build build\\ /s"
   },
   "author": "",
   "license": "ISC",
