@@ -8,6 +8,7 @@
     "dev": "ts-node-dev --ignore-watch data index.ts",
     "start": "node index.js",
     "tsc": "tsc",
+    "build": "..\\risbeegomfkerho-app\\npm run build",
     "deploy": "rmdir build /s /q && xcopy ..\\risbeegomfkerho-app\\build build\\ /s && git add . && git commit -m \"Deploy-script\" && git push"
   },
   "author": "",
