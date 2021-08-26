@@ -9,6 +9,7 @@ const calculateHandicaps = (pelit) => {
     if (pelit.length < 1)
         throw Error('Pelit on tyhjä perkele!');
     const hcTable = new Array();
+    const matches = new Array();
     for (const peli of pelit) {
         let rataObj;
         //Etsi rata Handicap listalta tai luo uusi
@@ -29,7 +30,7 @@ const calculateHandicaps = (pelit) => {
             }
             else
                 pelaajaObj = player;
-            // Lasken pelin Handicapit
+            //Lasken pelin Handicapit
             pelaaja.totalHC = pelaaja.total - pelaajaObj.hc;
             pelaaja.HC = pelaajaObj.hc;
             // Päivitä Handicapit
@@ -41,26 +42,29 @@ const calculateHandicaps = (pelit) => {
             pelaajaObj.average = pelaajaObj.lastRounds.reduce((p, c) => p + c, 0) / pelaajaObj.lastRounds.length;
             pelaajaObj.hc = pelaajaObj.median;
         }
-        // Lasketaan rankingit jokaiselle pelaajalle
-        for (const pelaaja of peli.players) {
-            const rankki = peli.players.reduce((p, c) => {
-                if (c.total < pelaaja.total)
-                    p.rank++;
-                if (c.totalHC < pelaaja.totalHC)
-                    p.rankHC++;
-                return p;
-            }, { rank: 1, rankHC: 1 });
-            pelaaja.rank = rankki.rank;
-            pelaaja.rankHC = rankki.rankHC;
+        if (peli.players.length >= parser_config__json_1.default.minPlayersForMatch) {
+            peli.match = true;
+            // Lasketaan rankingit jokaiselle pelaajalle
+            for (const pelaaja of peli.players) {
+                const rankki = peli.players.reduce((p, c) => {
+                    if (c.total < pelaaja.total)
+                        p.rank++;
+                    if (c.totalHC && pelaaja.totalHC && c.totalHC < pelaaja.totalHC)
+                        p.rankHC++;
+                    return p;
+                }, { rank: 1, rankHC: 1 });
+                pelaaja.rank = rankki.rank;
+                pelaaja.rankHC = rankki.rankHC;
+            }
+            matches.push(peli);
         }
     }
-    return hcTable;
+    return { hcTable, matches };
 };
 exports.calculateHandicaps = calculateHandicaps;
 const median = (data) => {
     const arvot = [...data];
     arvot.sort((a, b) => a - b);
-    console.log(arvot);
     const pituus = arvot.length;
     if (pituus === 0)
         return 0;

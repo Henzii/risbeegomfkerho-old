@@ -15,17 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const games_json_1 = __importDefault(require("./data/games.json"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const multer_1 = __importDefault(require("multer"));
 const parseUploadedFile_1 = require("./utils/parseUploadedFile");
+const mongoose_1 = __importDefault(require("mongoose"));
+const PeliModel_1 = __importDefault(require("./models/PeliModel"));
+const HandicapListModel_1 = __importDefault(require("./models/HandicapListModel"));
+const calculateHandicaps_1 = require("./utils/calculateHandicaps");
 const app = express_1.default();
 let user = 'Unknown';
-let gameData;
-if ('games' in games_json_1.default || 'hc' in games_json_1.default)
-    gameData = games_json_1.default;
-else
-    gameData = { games: [], hc: [] };
 const storage = multer_1.default.diskStorage({
     destination: (_req, _file, cb) => cb(null, './data'),
     filename: (_req, _file_, cb) => cb(null, `${user}.csv`)
@@ -72,15 +70,58 @@ app.use((req, res, next) => {
         res.status(401).end();
     }
 });
-app.post('/upload', upload.single('filu'), (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const parseta = yield parseUploadedFile_1.parseUploadedFile(`./data/${user}.csv`, user);
-    res.json(parseta);
-}));
+app.get('/api/calculateHandicaps', (_req, res) => {
+    console.log('Haetaan pelejä...');
+    PeliModel_1.default.find({}).sort({ date: 1 }).then(pelit => {
+        const hoocee = calculateHandicaps_1.calculateHandicaps(pelit);
+        res.json(hoocee);
+        console.log('Tuhotaan hc-listaa tietokannasta...');
+        HandicapListModel_1.default.deleteMany({}).then(() => {
+            console.log('OK!\nLisätään uutta hc-taulua tietokantaan...');
+            HandicapListModel_1.default.insertMany(hoocee.hcTable)
+                .then(() => console.log('OK!'))
+                .catch(e => console.log('Virhe!', e));
+        }).catch(e => console.log('Virhe!', e));
+    }).catch(e => {
+        res.status(401).send(e);
+    });
+});
 app.get('/api/games', (_req, res) => {
-    res.json(gameData.games.filter(g => g.match === true));
+    PeliModel_1.default.find({}).sort({ date: 1 }).then(pelit => {
+        const { matches } = calculateHandicaps_1.calculateHandicaps(pelit);
+        res.json(matches);
+    }).catch(e => {
+        res.status(401).send(e);
+    });
 });
 app.get('/api/hc', (_req, res) => {
-    res.json(gameData.hc);
+    PeliModel_1.default.find({}).sort({ date: 1 }).then(pelit => {
+        const { hcTable } = calculateHandicaps_1.calculateHandicaps(pelit);
+        res.json(hcTable);
+    }).catch(e => {
+        res.status(401).send(e);
+    });
+});
+app.post('/upload', upload.single('filu'), (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { pelit, ignored } = yield parseUploadedFile_1.parseUploadedFile(`./data/${user}.csv`, user);
+    const lisatty = { uusia: 0, duplikaatteja: 0 };
+    console.log('Received file from ' + user);
+    console.log('Inserting to db...');
+    PeliModel_1.default.insertMany(pelit, { ordered: false }).then((res) => {
+        console.log('Ok, lisätty kaikki', res.length);
+        lisatty.uusia = res.length;
+    }).catch(e => {
+        console.log('Virhe! Lisätty:', e.result.result.nInserted, ", duplikaatteja:", e.result.result.writeErrors.length);
+        lisatty.uusia = e.result.result.nInserted;
+        lisatty.duplikaatteja = e.result.result.writeErrors.length;
+    }).finally(() => {
+        res.send(Object.assign(Object.assign({}, ignored), lisatty));
+    });
+}));
+mongoose_1.default.connect(process.env.MONGO_URI).then(() => {
+    console.log('yhdistetty tietokantaan');
+}).catch(e => {
+    console.log('Virhe yhdistettäessä tietokantaan! ', e.message);
 });
 const PORT = process.env.PORT || 3001;
 console.log('Portissa ' + PORT);

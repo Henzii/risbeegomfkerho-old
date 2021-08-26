@@ -14,32 +14,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseUploadedFile = void 0;
 const promises_1 = __importDefault(require("fs/promises"));
-const removeDuplicates_1 = require("./removeDuplicates");
-const games_json_1 = __importDefault(require("../data/games.json"));
-const calculateHandicaps_1 = require("./calculateHandicaps");
 const parser_config__json_1 = __importDefault(require("./parser.config..json"));
 const SCORES_AFTER = '2021';
 const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0, void 0, function* () {
-    let gameData;
-    if (!('games' in games_json_1.default))
-        gameData = { games: new Array(), hc: new Array() };
-    else
-        gameData = games_json_1.default;
     const fileData = yield promises_1.default.readFile(filename, 'utf-8');
     const rivit = fileData.split('\n');
-    let pelit = [];
-    const palautus = {
-        newResults: 0,
-        ignored: {
-            wrongDate: 0,
-            wrongName: {
-                count: 0,
-                names: new Array()
-            },
-            duplicates: 0,
-        }
+    const ignored = {
+        wrongDate: 0,
+        wrongName: {
+            count: 0,
+            names: new Array()
+        },
     };
-    let peli = { course: { name: '', layout: '', date: '', par: '' }, players: [], match: false };
+    let peli = { _id: '', course: { name: '', layout: '', par: 0 }, players: [], match: false };
+    const pelit = [];
     for (const rivi of rivit) {
         // eslint-disable-next-line prefer-const
         let [player, course, layout, date, total, plusminus, ...score] = rivi.split(',');
@@ -47,6 +35,8 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             player = "Antti";
         if (player === "Ilkka" || player === "Ilkka Davidsen")
             player = "Ile";
+        if (course === "Malminiitty" && layout === "Vakio layout")
+            layout = "Niitty";
         if (player === '' || date === '')
             continue;
         if (player === 'Par') {
@@ -56,34 +46,30 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
                     peli['fromUser'] = fromUser;
                 pelit.push(peli);
             }
-            peli = { course: { name: '', layout: '', date: '', par: '' }, players: [], match: false };
-            peli.course = { name: course, layout, date, par: total };
+            peli = {
+                _id: (course.toLowerCase() + "-" + layout.toLowerCase() + "-" + date).replace(/[:,. ()öäå]/g, '-'),
+                date: new Date(date),
+                course: {
+                    name: '',
+                    layout: '',
+                    par: 0
+                },
+                players: []
+            };
+            peli.course = { name: course, layout, par: +total };
         }
         else if (!date.startsWith(SCORES_AFTER)) {
-            palautus.ignored.wrongDate++;
+            ignored.wrongDate++;
         }
         else if (!parser_config__json_1.default.allowedPlayers.includes(player)) {
-            palautus.ignored.wrongName.count++;
-            if (!palautus.ignored.wrongName.names.includes(player))
-                palautus.ignored.wrongName.names.push(player);
+            ignored.wrongName.count++;
+            if (!ignored.wrongName.names.includes(player))
+                ignored.wrongName.names.push(player);
         }
         else {
-            peli.players.push({ name: player, total: +total, plusminus: +plusminus, score, totalHC: 0, HC: 0 });
+            peli.players.push({ name: player, total: +total, plusminus: +plusminus, score });
         }
     }
-    palautus.ignored.duplicates = pelit.length;
-    pelit = removeDuplicates_1.removeDuplicates(pelit, gameData.games);
-    palautus.ignored.duplicates -= pelit.length;
-    palautus.newResults = pelit.length;
-    if (pelit.length > -1) {
-        gameData.games = gameData.games.concat(pelit);
-        gameData.games.sort((a, b) => {
-            //if (!a.course || !b.course) return 0;
-            return new Date(a.course.date).getTime() - new Date(b.course.date).getTime();
-        });
-        gameData.hc = calculateHandicaps_1.calculateHandicaps(gameData.games);
-        yield promises_1.default.writeFile('./data/games.json', JSON.stringify(gameData), 'utf-8');
-    }
-    return Object.assign({}, palautus);
+    return { pelit, ignored };
 });
 exports.parseUploadedFile = parseUploadedFile;

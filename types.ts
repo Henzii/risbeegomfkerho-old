@@ -1,44 +1,40 @@
 export interface Peli {
-    course: GamesCourse,
+    _id: string,
+    course: Course,
+    date?: Date,
     players: Array<Player>,
-    match: boolean,
+    match?: boolean,
     fromUser?: string
 }
 export interface Course {
     name: string,
     layout: string,
-}
-export interface GamesCourse extends Course{
-    par: string,
-    date: string
+    par?: number,
 }
 export interface Player {
     name: string,
     total: number,
     plusminus: number,
     score: Array<string>,
-    HC: number,
-    totalHC: number,
+    totalHC?: number,
+    HC?: number,
     rank?: number,
     rankHC?: number
-}
-export interface PlayerHC {
-    name: string,
-    games: number,
-    hc: number,
-    lastRounds: Array<number>,
-    median: number,
-    average: number
 }
 export interface Credentials {
     username: string,
     password: string,
 }
+export interface PlayerHC {
+    name: string,
+    games: number,
+    lastRounds: Array<number>,
+    hc: number,
+    median: number,
+    average: number,
+
+}
 export interface hcTable {
     course: Course,
     players: Array<PlayerHC>
-}
-export interface JSONdata {
-    games: Array<Peli>,
-    hc: Array<hcTable>
 }
