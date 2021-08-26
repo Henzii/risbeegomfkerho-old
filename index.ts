@@ -87,7 +87,7 @@ app.get('/api/games', (_req, res) => {
         const { matches } = calculateHandicaps(pelit as unknown as Array<Peli>);
         res.json( matches);
     }).catch(e => {
-        res.status(401).send(e);
+        res.status(400).send(e);
     });
 });
 app.get('/api/hc', (_req, res) => {
@@ -95,7 +95,7 @@ app.get('/api/hc', (_req, res) => {
         const { hcTable } = calculateHandicaps(pelit as unknown as Array<Peli>);
         res.json( hcTable );
     }).catch(e => {
-        res.status(401).send(e);
+        res.status(400).send(e);
     });
 });
 app.post('/upload', upload.single('filu'), async (_req, res) => {
