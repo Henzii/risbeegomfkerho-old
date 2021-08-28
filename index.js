@@ -66,7 +66,7 @@ app.use((req, res, next) => {
         next();
     }
     catch (e) {
-        console.log(`${req.secure} ${req.method} ${req.path} Epäkelpo token, estetty! (${user})`);
+        console.log(`${req.secure} ${req.method} ${req.path} Epäkelpo token, estetty!`);
         res.status(401).end();
     }
 });
@@ -91,7 +91,7 @@ app.get('/api/games', (_req, res) => {
         const { matches } = calculateHandicaps_1.calculateHandicaps(pelit);
         res.json(matches);
     }).catch(e => {
-        res.status(401).send(e);
+        res.status(400).send(e);
     });
 });
 app.get('/api/hc', (_req, res) => {
@@ -99,7 +99,7 @@ app.get('/api/hc', (_req, res) => {
         const { hcTable } = calculateHandicaps_1.calculateHandicaps(pelit);
         res.json(hcTable);
     }).catch(e => {
-        res.status(401).send(e);
+        res.status(400).send(e);
     });
 });
 app.post('/upload', upload.single('filu'), (_req, res) => __awaiter(void 0, void 0, void 0, function* () {

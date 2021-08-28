@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import { Peli } from '../types';
 import setup from './parser.config..json';
-const SCORES_AFTER = '2021';
 
 export const parseUploadedFile = async (filename: string, fromUser = '') => {
 
@@ -15,27 +14,23 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
             names: new Array<string>()
         },
     };
-    let peli: Peli = { _id: '', course: { name: '', layout: '', par: 0 }, players: [], match: false };
+    let peli: Peli = { _id: '', date: new Date(), course: { name: '', layout: '', par: 0 }, players: [], match: false };
     const pelit: Array<Peli> = [];
 
     for (const rivi of rivit) {
         // eslint-disable-next-line prefer-const
         let [player, course, layout, date, total, plusminus, ...score] = rivi.split(',');
-
         if (player === 'Saikkis') player = "Antti";
         if (player === "Ilkka" || player === "Ilkka Davidsen") player = "Ile";
         if (course === "Malminiitty" && layout === "Vakio layout") layout = "Niitty";
-
-        if (player === '' || date === '') continue;
-
-        if (player === 'Par') {
+        if (player === 'Par' || rivi === '') {
             if (peli.players.length >= setup.minPlayersForHc) {
                 peli.match = peli.players.length >= setup.minPlayersForMatch;
                 if (fromUser !== '') peli['fromUser'] = fromUser;
                 pelit.push(peli);
             }
             peli = {
-                _id: (course.toLowerCase() + "-" + layout.toLowerCase() + "-" + date).replace(/[:,. ()öäå]/g, '-'),
+                _id: (course?.toLowerCase() + "-" + layout?.toLowerCase() + "-" + date).replace(/[:,. ()öäå]/g, '-'),
                 date: new Date(date),
                 course: {
                     name: '',
@@ -45,7 +40,7 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
                 players: []
             };
             peli.course = { name: course, layout, par: +total };
-        } else if (!date.startsWith(SCORES_AFTER)) {
+        } else if (new Date(date).getTime() < new Date(setup.scoresAfterDate).getTime()) {
             ignored.wrongDate++;
         } else if (!setup.allowedPlayers.includes(player)) {
             ignored.wrongName.count++;
@@ -57,6 +52,7 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
         }
 
     }
+    console.log(pelit);
     return { pelit, ignored };
 
 };

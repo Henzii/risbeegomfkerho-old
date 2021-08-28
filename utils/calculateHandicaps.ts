@@ -40,7 +40,8 @@ export const calculateHandicaps = (pelit: Array<Peli>) => {
             pelaajaObj.average = pelaajaObj.lastRounds.reduce((p, c) => p + c, 0) / pelaajaObj.lastRounds.length;
             pelaajaObj.hc = pelaajaObj.median;
         }
-        if (peli.players.length >= setup.minPlayersForMatch) {
+        if (peli.players.length >= setup.minPlayersForMatch && peli.date.getTime() >= new Date(setup.matchesAfterDate).getTime()) {
+            console.log(peli.date.getTime() + " - " + new Date(setup.matchesAfterDate).getTime());
             peli.match = true;
             // Lasketaan rankingit jokaiselle pelaajalle
             for (const pelaaja of peli.players) {

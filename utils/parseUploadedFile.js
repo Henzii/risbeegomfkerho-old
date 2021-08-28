@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseUploadedFile = void 0;
 const promises_1 = __importDefault(require("fs/promises"));
 const parser_config__json_1 = __importDefault(require("./parser.config..json"));
-const SCORES_AFTER = '2021';
 const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0, void 0, function* () {
     const fileData = yield promises_1.default.readFile(filename, 'utf-8');
     const rivit = fileData.split('\n');
@@ -26,7 +25,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             names: new Array()
         },
     };
-    let peli = { _id: '', course: { name: '', layout: '', par: 0 }, players: [], match: false };
+    let peli = { _id: '', date: new Date(), course: { name: '', layout: '', par: 0 }, players: [], match: false };
     const pelit = [];
     for (const rivi of rivit) {
         // eslint-disable-next-line prefer-const
@@ -37,9 +36,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             player = "Ile";
         if (course === "Malminiitty" && layout === "Vakio layout")
             layout = "Niitty";
-        if (player === '' || date === '')
-            continue;
-        if (player === 'Par') {
+        if (player === 'Par' || rivi === '') {
             if (peli.players.length >= parser_config__json_1.default.minPlayersForHc) {
                 peli.match = peli.players.length >= parser_config__json_1.default.minPlayersForMatch;
                 if (fromUser !== '')
@@ -47,7 +44,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
                 pelit.push(peli);
             }
             peli = {
-                _id: (course.toLowerCase() + "-" + layout.toLowerCase() + "-" + date).replace(/[:,. ()öäå]/g, '-'),
+                _id: ((course === null || course === void 0 ? void 0 : course.toLowerCase()) + "-" + (layout === null || layout === void 0 ? void 0 : layout.toLowerCase()) + "-" + date).replace(/[:,. ()öäå]/g, '-'),
                 date: new Date(date),
                 course: {
                     name: '',
@@ -58,7 +55,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             };
             peli.course = { name: course, layout, par: +total };
         }
-        else if (!date.startsWith(SCORES_AFTER)) {
+        else if (new Date(date).getTime() < new Date(parser_config__json_1.default.scoresAfterDate).getTime()) {
             ignored.wrongDate++;
         }
         else if (!parser_config__json_1.default.allowedPlayers.includes(player)) {
@@ -70,6 +67,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             peli.players.push({ name: player, total: +total, plusminus: +plusminus, score });
         }
     }
+    console.log(pelit);
     return { pelit, ignored };
 });
 exports.parseUploadedFile = parseUploadedFile;

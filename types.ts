@@ -1,7 +1,7 @@
 export interface Peli {
     _id: string,
     course: Course,
-    date?: Date,
+    date: Date,
     players: Array<Player>,
     match?: boolean,
     fromUser?: string

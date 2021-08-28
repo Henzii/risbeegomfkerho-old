@@ -59,7 +59,7 @@ app.use((req, res, next) => {
         console.log(`${req.secure} ${req.method} ${req.path} ${user}`);
         next();
     } catch (e) {
-        console.log(`${req.secure} ${req.method} ${req.path} Epäkelpo token, estetty! (${user})`);
+        console.log(`${req.secure} ${req.method} ${req.path} Epäkelpo token, estetty!`);
         res.status(401).end();
     }
 });
