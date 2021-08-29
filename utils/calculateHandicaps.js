@@ -35,15 +35,13 @@ const calculateHandicaps = (pelit) => {
             pelaaja.HC = pelaajaObj.hc;
             // Päivitä Handicapit
             pelaajaObj.games++;
-            pelaajaObj.lastRounds.push(pelaaja.plusminus);
-            if (pelaajaObj.lastRounds.length > parser_config__json_1.default.lastRoundsCount)
-                pelaajaObj.lastRounds.shift();
+            pelaajaObj.lastRounds.unshift(pelaaja.plusminus);
+            //if (pelaajaObj.lastRounds.length > setup.lastRoundsCount) pelaajaObj.lastRounds.shift();
             pelaajaObj.median = median(pelaajaObj.lastRounds);
             pelaajaObj.average = pelaajaObj.lastRounds.reduce((p, c) => p + c, 0) / pelaajaObj.lastRounds.length;
             pelaajaObj.hc = pelaajaObj.median;
         }
         if (peli.players.length >= parser_config__json_1.default.minPlayersForMatch && peli.date.getTime() >= new Date(parser_config__json_1.default.matchesAfterDate).getTime()) {
-            console.log(peli.date.getTime() + " - " + new Date(parser_config__json_1.default.matchesAfterDate).getTime());
             peli.match = true;
             // Lasketaan rankingit jokaiselle pelaajalle
             for (const pelaaja of peli.players) {
@@ -64,7 +62,7 @@ const calculateHandicaps = (pelit) => {
 };
 exports.calculateHandicaps = calculateHandicaps;
 const median = (data) => {
-    const arvot = [...data];
+    const arvot = data.slice(0, parser_config__json_1.default.lastRoundsCount);
     arvot.sort((a, b) => a - b);
     const pituus = arvot.length;
     if (pituus === 0)
