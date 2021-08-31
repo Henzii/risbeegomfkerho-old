@@ -9,8 +9,12 @@ export const puhuja = (req: ReqWithUser, _res: Response, next: NextFunction) => 
 export const userExtractor = (req: ReqWithUser, _res: Response, next: NextFunction) => {
     const auth = req.get('authorization')?.slice(7) as string;
     if (auth !== null && auth !== '') {
-        const user = jwt.verify(auth, process.env.TOKEN_KEY as Secret) as string || null;
-        req.user = user;
+        try {
+            const user = jwt.verify(auth, process.env.TOKEN_KEY as Secret) as string || null;
+            req.user = user;
+        } catch (e) {
+            req.user = null;
+        }
     }
     next();
 };
