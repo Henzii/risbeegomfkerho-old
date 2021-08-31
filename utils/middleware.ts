@@ -8,8 +8,10 @@ export const puhuja = (req: ReqWithUser, _res: Response, next: NextFunction) => 
 };
 export const userExtractor = (req: ReqWithUser, _res: Response, next: NextFunction) => {
     const auth = req.get('authorization')?.slice(7) as string;
-    const user = jwt.verify(auth, process.env.TOKEN_KEY as Secret) as string || null;
-    req.user = user;
+    if (auth !== null && auth !== '') {
+        const user = jwt.verify(auth, process.env.TOKEN_KEY as Secret) as string || null;
+        req.user = user;
+    }
     next();
 };
 export const requireLogin = () => {

@@ -13,8 +13,10 @@ exports.puhuja = puhuja;
 const userExtractor = (req, _res, next) => {
     var _a;
     const auth = (_a = req.get('authorization')) === null || _a === void 0 ? void 0 : _a.slice(7);
-    const user = jsonwebtoken_1.default.verify(auth, process.env.TOKEN_KEY) || null;
-    req.user = user;
+    if (auth !== null && auth !== '') {
+        const user = jsonwebtoken_1.default.verify(auth, process.env.TOKEN_KEY) || null;
+        req.user = user;
+    }
     next();
 };
 exports.userExtractor = userExtractor;
