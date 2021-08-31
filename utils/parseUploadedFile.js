@@ -67,7 +67,6 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             peli.players.push({ name: player, total: +total, plusminus: +plusminus, score });
         }
     }
-    console.log(pelit);
     return { pelit, ignored };
 });
 exports.parseUploadedFile = parseUploadedFile;

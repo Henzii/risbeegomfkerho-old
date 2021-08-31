@@ -52,7 +52,6 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
         }
 
     }
-    console.log(pelit);
     return { pelit, ignored };
 
 };
