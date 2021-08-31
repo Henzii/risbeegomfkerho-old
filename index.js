@@ -17,6 +17,7 @@ app.use(cors_1.default());
 app.use(express_1.default.json());
 // Heroku force https
 app.use(middleware_1.forceHTTPS);
+app.use(middleware_1.userExtractor);
 app.use(middleware_1.puhuja);
 app.use(express_1.default.static('build'));
 app.use('/login', login_1.default);

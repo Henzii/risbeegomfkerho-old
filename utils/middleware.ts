@@ -1,8 +1,15 @@
 import { Request, Response, NextFunction } from 'express';
+import { ReqWithUser } from '../types';
 import jwt, { Secret } from 'jsonwebtoken';
 
-export const puhuja = (req: Request, _res: Response, next: NextFunction) => {
-    console.log(`${req.method} ${req.path} ${req.ip}`);
+export const puhuja = (req: ReqWithUser, _res: Response, next: NextFunction) => {
+    console.log(`${req.method} ${req.path} ${req.user} ${req.ip}`);
+    next();
+};
+export const userExtractor = (req: ReqWithUser, _res: Response, next: NextFunction) => {
+    const auth = req.get('authorization')?.slice(7) as string;
+    const user = jwt.verify(auth, process.env.TOKEN_KEY as Secret) as string || null;
+    req.user = user;
     next();
 };
 export const requireLogin = () => {

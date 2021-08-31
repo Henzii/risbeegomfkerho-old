@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import gameApiRouter from './controllers/gameApi';
 import uploadRouter from './controllers/upload';
 import loginRouter from './controllers/login';
-import { puhuja, requireLogin, forceHTTPS } from './utils/middleware';
+import { puhuja, requireLogin, forceHTTPS, userExtractor } from './utils/middleware';
 
 const app = express();
 dotenv.config();
@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Heroku force https
 app.use(forceHTTPS);
-
+app.use(userExtractor);
 app.use(puhuja);
 app.use(express.static('build'));
 app.use('/login', loginRouter);

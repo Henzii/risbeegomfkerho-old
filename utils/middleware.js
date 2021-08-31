@@ -3,13 +3,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.forceHTTPS = exports.requireLogin = exports.puhuja = void 0;
+exports.forceHTTPS = exports.requireLogin = exports.userExtractor = exports.puhuja = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const puhuja = (req, _res, next) => {
-    console.log(`${req.method} ${req.path} ${req.ip}`);
+    console.log(`${req.method} ${req.path} ${req.user} ${req.ip}`);
     next();
 };
 exports.puhuja = puhuja;
+const userExtractor = (req, _res, next) => {
+    var _a;
+    const auth = (_a = req.get('authorization')) === null || _a === void 0 ? void 0 : _a.slice(7);
+    const user = jsonwebtoken_1.default.verify(auth, process.env.TOKEN_KEY) || null;
+    req.user = user;
+    next();
+};
+exports.userExtractor = userExtractor;
 const requireLogin = () => {
     return (req, res, next) => {
         var _a;

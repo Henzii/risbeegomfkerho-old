@@ -1,3 +1,9 @@
+import { Request } from 'express';
+
+export interface ReqWithUser extends Request {
+    user?: string | null,
+}
+
 export interface Peli {
     _id: string,
     course: Course,
