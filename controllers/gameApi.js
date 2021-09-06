@@ -17,7 +17,7 @@ gameApiRouter.get('/hc', (_req, res) => {
     });
 });
 gameApiRouter.get('/games', (_req, res) => {
-    PeliModel_1.default.find({ match: true }).then(data => {
+    PeliModel_1.default.find({ match: true }).sort({ date: 1 }).then(data => {
         res.json(data);
     }).catch(e => {
         console.log('Error!', e);
