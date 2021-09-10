@@ -16,6 +16,7 @@ export interface Course {
     name: string,
     layout: string,
     par?: number,
+    pars?: Array<string>
 }
 export interface Player {
     name: string,

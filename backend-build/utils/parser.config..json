@@ -1,0 +1,20 @@
+{
+    "minPlayersForHc": 2,
+    "minPlayersForMatch": 5,
+    "lastRoundsCount": 10,
+    "scoresAfterDate": "2020-1-1",
+    "matchesAfterDate": "2021-1-1",
+    "allowedPlayers": [
+        "Henkka",
+        "Antti",
+        "Saikkis",
+        "Ile",
+        "Jouni",
+        "Emma",
+        "Kimmo",
+        "Saku",
+        "Henu",
+        "Teemu",
+        "Sampo"
+    ]
+}

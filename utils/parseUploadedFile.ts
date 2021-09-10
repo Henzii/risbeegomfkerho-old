@@ -14,7 +14,7 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
             names: new Array<string>()
         },
     };
-    let peli: Peli = { _id: '', date: new Date(), course: { name: '', layout: '', par: 0 }, players: [], match: false };
+    let peli: Peli = { _id: '', date: new Date(), course: { name: '', layout: '', par: 0, pars: []}, players: [], match: false };
     const pelit: Array<Peli> = [];
 
     for (const rivi of rivit) {
@@ -33,13 +33,13 @@ export const parseUploadedFile = async (filename: string, fromUser = '') => {
                 _id: (course?.toLowerCase() + "-" + layout?.toLowerCase() + "-" + date).replace(/[:,. ()öäå]/g, '-'),
                 date: new Date(date),
                 course: {
-                    name: '',
-                    layout: '',
-                    par: 0
+                    name: course,
+                    layout: layout,
+                    par: +total,
+                    pars: score
                 },
                 players: []
             };
-            peli.course = { name: course, layout, par: +total };
         } else if (new Date(date).getTime() < new Date(setup.scoresAfterDate).getTime()) {
             ignored.wrongDate++;
         } else if (!setup.allowedPlayers.includes(player)) {

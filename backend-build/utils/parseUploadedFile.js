@@ -25,7 +25,7 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
             names: new Array()
         },
     };
-    let peli = { _id: '', date: new Date(), course: { name: '', layout: '', par: 0 }, players: [], match: false };
+    let peli = { _id: '', date: new Date(), course: { name: '', layout: '', par: 0, pars: [] }, players: [], match: false };
     const pelit = [];
     for (const rivi of rivit) {
         // eslint-disable-next-line prefer-const
@@ -47,13 +47,13 @@ const parseUploadedFile = (filename, fromUser = '') => __awaiter(void 0, void 0,
                 _id: ((course === null || course === void 0 ? void 0 : course.toLowerCase()) + "-" + (layout === null || layout === void 0 ? void 0 : layout.toLowerCase()) + "-" + date).replace(/[:,. ()öäå]/g, '-'),
                 date: new Date(date),
                 course: {
-                    name: '',
-                    layout: '',
-                    par: 0
+                    name: course,
+                    layout: layout,
+                    par: +total,
+                    pars: score
                 },
                 players: []
             };
-            peli.course = { name: course, layout, par: +total };
         }
         else if (new Date(date).getTime() < new Date(parser_config__json_1.default.scoresAfterDate).getTime()) {
             ignored.wrongDate++;

@@ -37,6 +37,7 @@ const skeema = new mongoose.Schema({
         name: String,
         layout: String,
         par: Number,
+        pars: [String],
     }    
 });
 export default mongoose.model('peli', skeema);

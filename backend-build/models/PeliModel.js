@@ -40,6 +40,7 @@ const skeema = new mongoose_1.default.Schema({
         name: String,
         layout: String,
         par: Number,
+        pars: [String],
     }
 });
 exports.default = mongoose_1.default.model('peli', skeema);
