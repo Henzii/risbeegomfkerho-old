@@ -18,8 +18,8 @@ app.use(forceHTTPS);
 app.use(userExtractor);
 app.use(puhuja);
 app.use(express.static('build'));
-app.use('/login', loginRouter);
 
+app.use('/login', loginRouter);
 app.use('/api', requireLogin(), gameApiRouter);
 app.use('/upload', requireLogin(), uploadRouter);
 
